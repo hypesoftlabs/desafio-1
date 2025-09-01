@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v9.0": {
       "Hypesoft.API/1.0.0": {
         "dependencies": {
+          "Hypesoft.Application": "1.0.0",
+          "Hypesoft.Domain": "1.0.0",
+          "Hypesoft.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.8",
           "Swashbuckle.AspNetCore": "9.0.4"
         },
@@ -72,6 +75,37 @@
             "fileVersion": "9.0.4.1727"
           }
         }
+      },
+      "Hypesoft.Application/1.0.0": {
+        "dependencies": {
+          "Hypesoft.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Hypesoft.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Hypesoft.Domain/1.0.0": {
+        "runtime": {
+          "Hypesoft.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Hypesoft.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Hypesoft.Application": "1.0.0",
+          "Hypesoft.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Hypesoft.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -129,6 +163,21 @@
       "sha512": "sha512-2ugT2OvZsKHqk/2rMDmuqDuFmtix0NvzlXxAfnfHROVMTovbx7Z0UsOQHZa462DBTgdBFnR2Ss6wm4fypfymdA==",
       "path": "swashbuckle.aspnetcore.swaggerui/9.0.4",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
+    },
+    "Hypesoft.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hypesoft.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hypesoft.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

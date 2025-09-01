@@ -110,6 +110,43 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Hypesoft.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Hypesoft.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Hypesoft.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hypesoft.Application.dll": {}
+        }
+      },
+      "Hypesoft.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Hypesoft.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hypesoft.Domain.dll": {}
+        }
+      },
+      "Hypesoft.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Hypesoft.Application": "1.0.0",
+          "Hypesoft.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Hypesoft.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hypesoft.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -469,10 +506,28 @@
         "swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Hypesoft.Application/1.0.0": {
+      "type": "project",
+      "path": "../Hypesoft.Application/Hypesoft.Application.csproj",
+      "msbuildProject": "../Hypesoft.Application/Hypesoft.Application.csproj"
+    },
+    "Hypesoft.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Hypesoft.Domain/Hypesoft.Domain.csproj",
+      "msbuildProject": "../Hypesoft.Domain/Hypesoft.Domain.csproj"
+    },
+    "Hypesoft.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Hypesoft.Infrastructure/Hypesoft.Infrastructure.csproj",
+      "msbuildProject": "../Hypesoft.Infrastructure/Hypesoft.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Hypesoft.Application >= 1.0.0",
+      "Hypesoft.Domain >= 1.0.0",
+      "Hypesoft.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.8",
       "Swashbuckle.AspNetCore >= 9.0.4"
     ]
@@ -501,7 +556,17 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj": {
+              "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj"
+            },
+            "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj": {
+              "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj"
+            },
+            "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

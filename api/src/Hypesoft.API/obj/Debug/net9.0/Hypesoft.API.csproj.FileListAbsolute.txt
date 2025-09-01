@@ -8,6 +8,15 @@ C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypes
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Hypesoft.API.pdb
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Hypesoft.Application.dll
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Hypesoft.Domain.dll
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Hypesoft.Infrastructure.dll
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Hypesoft.Application.pdb
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Hypesoft.Infrastructure.pdb
+C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Hypesoft.Domain.pdb
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\obj\Debug\net9.0\Hypesoft.API.csproj.AssemblyReference.cache
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\obj\Debug\net9.0\rpswa.dswa.cache.json
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\obj\Debug\net9.0\Hypesoft.API.GeneratedMSBuildEditorConfig.editorconfig
@@ -31,6 +40,3 @@ C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypes
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\obj\Debug\net9.0\Hypesoft.API.pdb
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\obj\Debug\net9.0\Hypesoft.API.genruntimeconfig.cache
 C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\obj\Debug\net9.0\ref\Hypesoft.API.dll
-C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\litzg\Desktop\Teste Tecnico - Hypesoft\hypesoft-challenge\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

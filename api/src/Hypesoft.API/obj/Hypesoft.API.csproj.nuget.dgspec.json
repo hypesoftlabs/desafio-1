@@ -25,7 +25,17 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj": {
+                "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj"
+              },
+              "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj": {
+                "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj"
+              },
+              "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -68,6 +78,194 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj",
+        "projectName": "Hypesoft.Application",
+        "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj",
+        "packagesPath": "C:\\Users\\litzg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\litzg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj": {
+                "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj",
+        "projectName": "Hypesoft.Domain",
+        "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj",
+        "packagesPath": "C:\\Users\\litzg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\litzg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj",
+        "projectName": "Hypesoft.Infrastructure",
+        "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\litzg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\litzg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj": {
+                "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Application\\Hypesoft.Application.csproj"
+              },
+              "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj": {
+                "projectPath": "C:\\Users\\litzg\\Desktop\\Teste Tecnico - Hypesoft\\hypesoft-challenge\\api\\src\\Hypesoft.Domain\\Hypesoft.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hypesoft.Application\Hypesoft.Application.csproj" />
+    <ProjectReference Include="..\Hypesoft.Infrastructure\Hypesoft.Infrastructure.csproj" />
+    <ProjectReference Include="..\Hypesoft.Domain\Hypesoft.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
