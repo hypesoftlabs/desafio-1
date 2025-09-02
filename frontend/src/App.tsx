@@ -1,11 +1,12 @@
-import { Input } from "@/components/ui/input";
+import router from "./router";
+import { RouterProvider } from "react-router-dom";
 
 
 function App() {
 
   return (
     <>
-      <Input />
+      <RouterProvider router={router} />
     </>
   );
 }
