@@ -1,0 +1,128 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: hypesoft-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: hypesoft
+    volumes:
+      - mongodb_data:/data/db
+      - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - hypesoft-network
+
+  # MongoDB Express (Admin UI)
+  mongo-express:
+    image: mongo-express:1.0.0
+    container_name: hypesoft-mongo-express
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password123
+      ME_CONFIG_MONGODB_URL: mongodb://admin:password123@mongodb:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin123
+    depends_on:
+      - mongodb
+    networks:
+      - hypesoft-network
+
+  # Keycloak (Authentication)
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    container_name: hypesoft-keycloak
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin123
+      KC_DB: dev-file
+      KC_HOSTNAME_STRICT: false
+      KC_HOSTNAME_STRICT_HTTPS: false
+      KC_HTTP_ENABLED: true
+    command: start-dev
+    volumes:
+      - ./scripts/keycloak-realm.json:/opt/keycloak/data/import/realm.json:ro
+    networks:
+      - hypesoft-network
+
+  # Backend API (.NET 9)
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: hypesoft-api
+    restart: unless-stopped
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__MongoDB=mongodb://admin:password123@mongodb:27017/hypesoft?authSource=admin
+      - Keycloak__Authority=http://keycloak:8080/realms/hypesoft
+      - Keycloak__Audience=hypesoft-api
+    depends_on:
+      - mongodb
+      - keycloak
+    networks:
+      - hypesoft-network
+    volumes:
+      - ./backend:/app
+      - /app/bin
+      - /app/obj
+
+  # Frontend (Next.js 14)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: hypesoft-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+      - NEXT_PUBLIC_KEYCLOAK_URL=http://localhost:8080
+      - NEXT_PUBLIC_KEYCLOAK_REALM=hypesoft
+      - NEXT_PUBLIC_KEYCLOAK_CLIENT_ID=hypesoft-frontend
+    depends_on:
+      - api
+    networks:
+      - hypesoft-network
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+
+  # Nginx (Reverse Proxy)
+  nginx:
+    image: nginx:alpine
+    container_name: hypesoft-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - frontend
+      - api
+    networks:
+      - hypesoft-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  hypesoft-network:
+    driver: bridge

@@ -4,6 +4,34 @@
 
 Bem-vindo ao desafio técnico da Hypesoft! Este projeto consiste no desenvolvimento de um sistema completo de gestão de produtos, demonstrando suas habilidades em arquitetura moderna, boas práticas de desenvolvimento e tecnologias de ponta.
 
+## 📊 Status do Projeto
+
+### ✅ Concluído
+- [x] Configuração do monorepo
+- [x] Docker Compose com todos os serviços
+- [x] Estrutura Clean Architecture (.NET 9)
+- [x] Frontend Next.js 14 com TypeScript
+- [x] Configuração MongoDB com dados de exemplo
+- [x] Keycloak configurado com realm e usuários
+- [x] Nginx como reverse proxy
+- [x] Estrutura de testes
+
+### 🚧 Em Desenvolvimento
+- [ ] Entidades de domínio (Categories, Products)
+- [ ] Implementação CQRS + MediatR
+- [ ] APIs REST com Swagger
+- [ ] Integração Keycloak no backend
+- [ ] Componentes frontend
+- [ ] Autenticação no frontend
+
+### 📝 Próximos Passos
+- [ ] Dashboard com métricas
+- [ ] CRUD completo de produtos
+- [ ] Sistema de categorias
+- [ ] Controle de estoque
+- [ ] Testes automatizados
+- [ ] Documentação completa
+
 ## Referência Visual
 
 O design da aplicação deve seguir o padrão visual moderno demonstrado neste protótipo:

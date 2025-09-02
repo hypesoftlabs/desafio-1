@@ -1,0 +1,132 @@
+{
+  "realm": "hypesoft",
+  "enabled": true,
+  "displayName": "Hypesoft Realm",
+  "displayNameHtml": "<div class=\"kc-logo-text\"><span>Hypesoft</span></div>",
+  "accessTokenLifespan": 300,
+  "accessTokenLifespanForImplicitFlow": 900,
+  "ssoSessionIdleTimeout": 1800,
+  "ssoSessionMaxLifespan": 36000,
+  "offlineSessionIdleTimeout": 2592000,
+  "accessCodeLifespan": 60,
+  "accessCodeLifespanUserAction": 300,
+  "accessCodeLifespanLogin": 1800,
+  "actionTokenGeneratedByAdminLifespan": 43200,
+  "actionTokenGeneratedByUserLifespan": 300,
+  "oauth2DeviceCodeLifespan": 600,
+  "oauth2DevicePollingInterval": 5,
+  "clients": [
+    {
+      "clientId": "hypesoft-api",
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "hypesoft-api-secret",
+      "redirectUris": ["*"],
+      "webOrigins": ["*"],
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "serviceAccountsEnabled": true,
+      "authorizationServicesEnabled": true,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "attributes": {
+        "access.token.lifespan": "300"
+      }
+    },
+    {
+      "clientId": "hypesoft-frontend",
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "hypesoft-frontend-secret",
+      "redirectUris": [
+        "http://localhost:3000/*",
+        "http://localhost:3000/auth/callback"
+      ],
+      "webOrigins": ["http://localhost:3000"],
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "attributes": {
+        "access.token.lifespan": "300"
+      }
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "description": "Administrator role with full access"
+      },
+      {
+        "name": "manager",
+        "description": "Manager role with product management access"
+      },
+      {
+        "name": "user",
+        "description": "Regular user role with read access"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Admin",
+      "lastName": "User",
+      "email": "admin@hypesoft.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["admin"],
+      "clientRoles": {
+        "hypesoft-api": ["admin"]
+      }
+    },
+    {
+      "username": "manager",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Manager",
+      "lastName": "User",
+      "email": "manager@hypesoft.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "manager123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["manager"],
+      "clientRoles": {
+        "hypesoft-api": ["manager"]
+      }
+    },
+    {
+      "username": "user",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Regular",
+      "lastName": "User",
+      "email": "user@hypesoft.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "user123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["user"],
+      "clientRoles": {
+        "hypesoft-api": ["user"]
+      }
+    }
+  ]
+}
