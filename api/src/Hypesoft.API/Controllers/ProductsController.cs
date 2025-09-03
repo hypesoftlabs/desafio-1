@@ -11,7 +11,7 @@ namespace Hypesoft.API.Controllers
   [Route("api/[controller]")]
   public class ProductsController : ControllerBase
   {
-    private static List<Product> Products = new List<Product>();
+    public static List<Product> Products = new List<Product>();
     private static int nextId = 1;
 
     private readonly IValidator<Product> _validator;
