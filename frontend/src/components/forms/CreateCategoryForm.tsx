@@ -49,7 +49,7 @@ export function CreateCategoryForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-4"
+        className="space-y-4 w-full max-w-md"
       >
         {/* Name */}
         <FormField
@@ -62,6 +62,7 @@ export function CreateCategoryForm() {
                 <Input
                   {...field}
                   placeholder="Category name"
+                  className="input bg-zinc-300"
                   required
                 />
               </FormControl>

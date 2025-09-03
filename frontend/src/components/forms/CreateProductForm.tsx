@@ -48,8 +48,7 @@ type ProductFormValues = z.infer<
 >;
 
 export function CreateProductForm() {
-  const { mutate } =
-    useCreateProduct();
+  const { mutate } = useCreateProduct();
 
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
@@ -80,7 +79,7 @@ export function CreateProductForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-4 w-full"
+        className="space-y-4 w-full max-w-md"
       >
         {/* Name */}
         <FormField
@@ -93,6 +92,7 @@ export function CreateProductForm() {
                 <Input
                   {...field}
                   placeholder="Product name"
+                  className="bg-zinc-300"
                   required
                 />
               </FormControl>
@@ -112,6 +112,7 @@ export function CreateProductForm() {
                 <Input
                   {...field}
                   placeholder="Product description"
+                  className="bg-zinc-300"
                   required
                 />
               </FormControl>
@@ -130,7 +131,8 @@ export function CreateProductForm() {
               <FormControl>
                 <Input
                   {...field}
-                  placeholder="10.5"
+                  placeholder="10"
+                  className="bg-zinc-300"
                   required
                 />
               </FormControl>
@@ -150,6 +152,7 @@ export function CreateProductForm() {
                 <Input
                   {...field}
                   placeholder="15"
+                  className="bg-zinc-300"
                   required
                 />
               </FormControl>
@@ -171,7 +174,7 @@ export function CreateProductForm() {
                   onValueChange={field.onChange}
                   required
                 >
-                  <SelectTrigger>
+                  <SelectTrigger className="bg-zinc-300 w-full">
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
                   <SelectContent>

@@ -20,7 +20,7 @@ export default function ListCategories() {
   } = useCategories();
   const { mutate: deleteCategoryMutate } =
     useDeleteCategory();
-
+  
   if (isLoading) return <p>Loading...</p>;
   if (error instanceof Error)
     return <p>Error: {error.message}</p>;
@@ -63,7 +63,11 @@ export default function ListCategories() {
             </Badge>
             <div className="flex justify-end gap-2 mt-2">
               <Button variant="default" size="sm">
-                Edit Category
+                <Link
+                  to={`/categories/${category.id}/update`}
+                >
+                  Edit Category
+                </Link>
               </Button>
               <Button
                 variant="destructive"

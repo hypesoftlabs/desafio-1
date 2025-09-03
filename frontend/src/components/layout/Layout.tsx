@@ -9,11 +9,17 @@ const Layout = () => {
     <div className="flex">
       <div className="navbar z-10 flex items-center justify-between w-full bg-zinc-50 gap-5 absolute top-0 p-7 mb-12">
         <h1 className="text-purple-500 text-3xl font-bold">
-          HYPE <span className="text-zinc-600">STOCK</span>
+          HYPE{" "}
+          <span className="text-zinc-600">
+            STOCK
+          </span>
         </h1>
         <div className="links flex gap-5 font-semibold text-zinc-700">
           <Link to="/">Overview</Link>
           <Link to="/products">Product List</Link>
+          <Link to="/products/low-stock">
+            Low Stock
+          </Link>
           <Link to="/categories">
             Categories List
           </Link>

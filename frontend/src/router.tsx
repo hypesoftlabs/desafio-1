@@ -8,6 +8,7 @@ import UpdateProduct from "./pages/products/UpdateProduct";
 import ListCategories from "./pages/categories/ListCategories";
 import CreateCategory from "./pages/categories/CreateCategory";
 import UpdateCategory from "./pages/categories/UpdateCategory";
+import LowStock from "./pages/products/LowStock";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
           {
             path: ":id/update",
             element: <UpdateProduct />,
+          },
+          {
+            path: "low-stock",
+            element: <LowStock />,
           },
         ],
       },
