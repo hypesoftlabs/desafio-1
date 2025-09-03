@@ -1,3 +1,4 @@
+import { ProductsByCategoryChart } from "@/components/charts/dashboardCharts";
 import { useDashboard } from "@/hooks/useDashboard";
 
 export default function Dashboard() {
@@ -5,7 +6,6 @@ export default function Dashboard() {
     totalProducts,
     totalStockValue,
     lowStock,
-    productsByCategory,
     isLoading,
     isError,
   } = useDashboard();
@@ -64,27 +64,9 @@ export default function Dashboard() {
         <h2 className="text-xl font-semibold mb-2">
           Products by Category
         </h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {Array.isArray(productsByCategory) &&
-            productsByCategory.map(
-              (item: {
-                category: string;
-                count: number;
-              }) => (
-                <li
-                  key={item.category}
-                  className="bg-white dark:bg-gray-800 shadow rounded-lg p-4 text-center"
-                >
-                  <p className="text-gray-500 dark:text-gray-400">
-                    {item.category}
-                  </p>
-                  <p className="text-lg font-semibold">
-                    {item.count}
-                  </p>
-                </li>
-              )
-            )}
-        </ul>
+        <div className="chart w-full max-h-99">
+          <ProductsByCategoryChart />
+        </div>
       </div>
     </div>
   );
