@@ -1,6 +1,3 @@
-// src/components/products/EditProductForm.tsx
-"use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -24,6 +21,7 @@ import {
 import { useCategories } from "@/hooks/useCategories";
 import { useUpdateProduct } from "@/hooks/useProducts";
 import type { Product } from "@/types";
+import { Input } from "../ui/input";
 
 // Zod schema
 const productSchema = z.object({
@@ -109,10 +107,10 @@ export function UpdateProductForm({
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <input
+                <Input
                   {...field}
                   placeholder="Product name"
-                  className="input"
+                  className="input bg-zinc-300"
                 />
               </FormControl>
               <FormMessage />
@@ -128,10 +126,10 @@ export function UpdateProductForm({
             <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
-                <input
+                <Input
                   {...field}
                   placeholder="Product description"
-                  className="input"
+                  className="input bg-zinc-300"
                 />
               </FormControl>
               <FormMessage />
@@ -147,10 +145,10 @@ export function UpdateProductForm({
             <FormItem>
               <FormLabel>Price</FormLabel>
               <FormControl>
-                <input
+                <Input
                   {...field}
                   placeholder="10.5"
-                  className="input"
+                  className="input bg-zinc-300"
                 />
               </FormControl>
               <FormMessage />
@@ -166,10 +164,10 @@ export function UpdateProductForm({
             <FormItem>
               <FormLabel>Stock</FormLabel>
               <FormControl>
-                <input
+                <Input
                   {...field}
                   placeholder="15"
-                  className="input"
+                  className="input bg-zinc-300"
                 />
               </FormControl>
               <FormMessage />
@@ -189,7 +187,7 @@ export function UpdateProductForm({
                   value={field.value}
                   onValueChange={field.onChange}
                 >
-                  <SelectTrigger>
+                  <SelectTrigger className="bg-zinc-300 w-full">
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
                   <SelectContent>

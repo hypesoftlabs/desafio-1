@@ -16,6 +16,11 @@ export interface CategoryCreate {
   name: string;
 }
 
+export interface CategoryUpdate {
+  id: number;
+  name: string;
+}
+
 export interface TotalProductsResponse {
   totalProducts: number;
 }
