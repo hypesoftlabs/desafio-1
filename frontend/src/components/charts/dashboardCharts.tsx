@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { useProductsChartData } from "@/hooks/useProductsChatData";
+import { useProductsChartData } from "@/hooks/useDashboard";
 
 ChartJS.register(
   CategoryScale,

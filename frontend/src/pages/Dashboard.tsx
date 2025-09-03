@@ -54,7 +54,7 @@ export default function Dashboard() {
             Low Stock Products
           </p>
           <p className="text-2xl font-semibold">
-            {lowStock}
+            {Array.isArray(lowStock) ? lowStock.length : lowStock}
           </p>
         </div>
       </div>

@@ -85,8 +85,12 @@ export default function ListProducts() {
               </Badge>
             </div>
             <div className="flex justify-end gap-2 mt-2">
-              <Button variant="default" size="sm">
-                Edit Product
+              <Button variant="default" size="sm" asChild>
+                <Link
+                  to={`/products/${product.id}/update`}
+                >
+                  Edit Product
+                </Link>
               </Button>
               <Button
                 variant="destructive"
