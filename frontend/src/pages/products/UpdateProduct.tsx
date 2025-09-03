@@ -5,7 +5,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import { useProducts } from "@/hooks/useProducts";
-import { UpdateProductForm } from "@/components/forms/updateProductForm";
+import { UpdateProductForm } from "@/components/forms/UpdateProductForm";
 
 export default function UpdateProduct() {
   const { id } = useParams<{ id: string }>();

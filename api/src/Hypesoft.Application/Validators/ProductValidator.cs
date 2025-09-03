@@ -33,9 +33,9 @@ namespace Hypesoft.Application.Validators
           .WithMessage("CategoryId must be provided.");
 
       // CategoryName required
-      RuleFor(p => p.CategoryName)
-          .NotEmpty()
-          .WithMessage("CategoryName is required.");
+    //   RuleFor(p => p.CategoryName)
+    //       .NotEmpty()
+    //       .WithMessage("CategoryName is required.");
     }
   }
 }

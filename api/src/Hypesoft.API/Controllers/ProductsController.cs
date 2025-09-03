@@ -88,6 +88,7 @@ namespace Hypesoft.API.Controllers
       existingProduct.Price = updatedProduct.Price;
       existingProduct.Stock = updatedProduct.Stock;
       existingProduct.CategoryId = updatedProduct.CategoryId;
+      existingProduct.CategoryName = category.Name;
 
       return Ok(new { message = "Product updated successfully.", data = existingProduct });
     }
