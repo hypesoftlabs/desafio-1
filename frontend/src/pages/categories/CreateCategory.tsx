@@ -2,8 +2,10 @@ import CreateCategoryForm from "@/components/forms/createCategoryForm";
 
 const CreateCategory = () => {
   return (
-    <div>
-      <h1>Create Category</h1>
+    <div className="flex flex-col gap-5 p-5">
+      <h1 className="text-lg font-semibold">
+        Create a new category
+      </h1>
       <CreateCategoryForm />
     </div>
   );

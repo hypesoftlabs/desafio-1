@@ -1,4 +1,7 @@
-import { useProducts } from "../../hooks/useProducts";
+import {
+  useDeleteProduct,
+  useProducts,
+} from "../../hooks/useProducts";
 import { useCategories } from "../../hooks/useCategories";
 import {
   Card,
@@ -8,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function ListProducts() {
   const {
@@ -16,20 +20,46 @@ export default function ListProducts() {
     error,
   } = useProducts();
   const { data: categories = [] } =
-    useCategories(); // pega as categorias
+    useCategories();
+
+  const { mutate: deleteProductMutate } =
+    useDeleteProduct();
 
   if (isLoading) return <p>Loading...</p>;
   if (error instanceof Error)
     return <p>Error: {error.message}</p>;
 
+  if (!products || products.length === 0)
+    return (
+      <p className="p-4 text-center text-gray-500 flex flex-col">
+        No products found
+        <Link
+          to="/products/new"
+          className="text-blue-500 hover:underline"
+        >
+          Create Product
+        </Link>
+      </p>
+    );
+
   // função para pegar o nome da categoria pelo id
   const getCategoryName = (id: number) =>
     categories.find((cat) => cat.id === id)
-      ?.name || "Unknown";
+      ?.name || "No category assigned";
+
+  const handleDelete = (id: number) => {
+    if (
+      confirm(
+        "Are you sure you want to delete this product?"
+      )
+    ) {
+      deleteProductMutate(id.toString());
+    }
+  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-      {products?.map((product) => (
+      {products.map((product) => (
         <Card
           key={product.id}
           className="hover:shadow-lg transition-shadow"
@@ -54,13 +84,22 @@ export default function ListProducts() {
                 Stock: {product.stock}
               </Badge>
             </div>
-            <Button
-              variant="default"
-              size="sm"
-              className="mt-2"
-            >
-              View Details
-            </Button>
+            <div className="flex justify-end gap-2 mt-2">
+              <Button variant="default" size="sm">
+                Edit Product
+              </Button>
+              <Button
+                variant="destructive"
+                size="sm"
+                onClick={() => {
+                  if (product.id !== undefined) {
+                    handleDelete(product.id);
+                  }
+                }}
+              >
+                Delete
+              </Button>
+            </div>
           </CardContent>
         </Card>
       ))}

@@ -10,3 +10,7 @@ export async function createCategory(category: CategoryCreate): Promise<Category
   const res = await api.post("/categories", category);
   return res.data.data;
 }
+
+export const deleteCategory = async (id: string): Promise<void> => {
+  await api.delete(`/categories/${id}`);
+};

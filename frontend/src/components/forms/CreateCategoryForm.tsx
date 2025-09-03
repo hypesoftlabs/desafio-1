@@ -42,6 +42,7 @@ export function CreateCategoryForm() {
 
   function onSubmit(values: CategoryFormValues) {
     mutate(values);
+    alert("Category created successfully!");
   }
 
   return (

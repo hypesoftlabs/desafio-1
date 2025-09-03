@@ -73,13 +73,14 @@ export function CreateProductForm() {
       stock: parseInt(values.stock, 10),
     };
     mutate(payload);
+    alert("Product created successfully!");
   }
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-4"
+        className="space-y-4 w-full"
       >
         {/* Name */}
         <FormField
