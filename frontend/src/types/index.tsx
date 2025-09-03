@@ -15,3 +15,19 @@ export interface Category {
 export interface CategoryCreate {
   name: string;
 }
+
+export interface TotalProductsResponse {
+  totalProducts: number;
+}
+
+export interface ProductsByCategoryResponse {
+  productsByCategory: Record<string, number>; // ou array de objetos se você quiser nome + qtd
+}
+
+export interface TotalStockValueResponse {
+  totalStockValue: number;
+}
+
+export interface LowStockResponse {
+  lowStockProducts: number;
+}
