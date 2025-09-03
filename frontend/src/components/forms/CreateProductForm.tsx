@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/select";
 
 import { useCategories } from "../../hooks/useCategories";
+import { useCreateProduct } from "@/hooks/useProducts";
 
 // Zod schema
 const productSchema = z.object({
@@ -47,6 +48,9 @@ type ProductFormValues = z.infer<
 >;
 
 export function CreateProductForm() {
+  const { mutate } =
+    useCreateProduct();
+
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
     defaultValues: {
@@ -68,7 +72,7 @@ export function CreateProductForm() {
       categoryId: parseInt(values.categoryId, 10),
       stock: parseInt(values.stock, 10),
     };
-    console.log(payload);
+    mutate(payload);
   }
 
   return (

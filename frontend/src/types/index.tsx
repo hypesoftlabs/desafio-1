@@ -1,13 +1,17 @@
 export interface Product {
-  id: number
-  name: string
-  description: string
-  price: number
-  stock: number
-  categoryId: number
+  id?: number;
+  name: string;
+  description: string;
+  price: number;
+  stock: number;
+  categoryId: number;
 }
 
 export interface Category {
-  id: number
-  name: string
+  id: number;
+  name: string;
+}
+
+export interface CategoryCreate {
+  name: string;
 }
