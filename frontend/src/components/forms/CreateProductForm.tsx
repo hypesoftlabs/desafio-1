@@ -69,7 +69,6 @@ export function CreateProductForm() {
       stock: parseInt(values.stock, 10),
     };
     console.log(payload);
-    // aqui você chamaria useCreateProduct(payload)
   }
 
   return (
@@ -89,6 +88,7 @@ export function CreateProductForm() {
                 <Input
                   {...field}
                   placeholder="Product name"
+                  required
                 />
               </FormControl>
               <FormMessage />
@@ -107,6 +107,7 @@ export function CreateProductForm() {
                 <Input
                   {...field}
                   placeholder="Product description"
+                  required
                 />
               </FormControl>
               <FormMessage />
@@ -125,6 +126,7 @@ export function CreateProductForm() {
                 <Input
                   {...field}
                   placeholder="10.5"
+                  required
                 />
               </FormControl>
               <FormMessage />
@@ -143,6 +145,7 @@ export function CreateProductForm() {
                 <Input
                   {...field}
                   placeholder="15"
+                  required
                 />
               </FormControl>
               <FormMessage />
@@ -161,6 +164,7 @@ export function CreateProductForm() {
                 <Select
                   value={field.value}
                   onValueChange={field.onChange}
+                  required
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Select category" />
