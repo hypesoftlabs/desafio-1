@@ -36,7 +36,7 @@ const Layout = () => {
           <p className="text-xl">User</p>
         </div>
       </div>
-      <div className="w-60 pt-25 h-screen px-10 flex bg-zinc-50 align-center text-center flex-col">
+      <div className="w-60 pt-25 min-h-screen px-10 flex bg-zinc-50 align-center text-center flex-col">
         <div className="mt-5 flex justify-center">
           <Link
             to="/"
@@ -47,7 +47,7 @@ const Layout = () => {
           </Link>
         </div>
       </div>
-      <div className="content py-25 px-10 bg-zinc-200 w-full">
+      <div className="content max-h-screen overflow-y-scroll py-25 px-10 bg-zinc-200 w-full">
         <Outlet />
       </div>
     </div>
