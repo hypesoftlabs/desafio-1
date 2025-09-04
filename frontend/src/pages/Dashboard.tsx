@@ -1,4 +1,5 @@
 import { ProductsByCategoryChart } from "@/components/charts/dashboardCharts";
+import Loader from "@/components/ui/loader";
 import { useDashboard } from "@/hooks/useDashboard";
 
 export default function Dashboard() {
@@ -12,9 +13,7 @@ export default function Dashboard() {
 
   if (isLoading)
     return (
-      <p className="text-center mt-10">
-        Loading...
-      </p>
+      <Loader />
     );
   if (isError)
     return (

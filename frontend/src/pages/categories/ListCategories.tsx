@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import Loader from "@/components/ui/loader";
 
 export default function ListCategories() {
   const {
@@ -20,8 +21,8 @@ export default function ListCategories() {
   } = useCategories();
   const { mutate: deleteCategoryMutate } =
     useDeleteCategory();
-  
-  if (isLoading) return <p>Loading...</p>;
+
+  if (isLoading) return <Loader />;
   if (error instanceof Error)
     return <p>Error: {error.message}</p>;
 
@@ -29,7 +30,10 @@ export default function ListCategories() {
     return (
       <p className="p-4 text-center text-gray-500 flex flex-col">
         No categories found
-        <Link to="/categories/new" className="text-blue-500 hover:underline">
+        <Link
+          to="/categories/new"
+          className="text-blue-500 hover:underline"
+        >
           Create Category
         </Link>
       </p>

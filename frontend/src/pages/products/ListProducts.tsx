@@ -12,6 +12,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Loader from "@/components/ui/loader";
 
 export default function ListProducts() {
   const {
@@ -25,7 +26,7 @@ export default function ListProducts() {
   const { mutate: deleteProductMutate } =
     useDeleteProduct();
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader />;
   if (error instanceof Error)
     return <p>Error: {error.message}</p>;
 
