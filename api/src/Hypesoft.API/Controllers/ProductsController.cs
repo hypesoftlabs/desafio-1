@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
+using MongoDB.Driver;
 
 namespace Hypesoft.API.Controllers
 {
@@ -11,28 +12,31 @@ namespace Hypesoft.API.Controllers
   [Route("api/[controller]")]
   public class ProductsController : ControllerBase
   {
-    public static List<Product> Products = new List<Product>();
-    private static int nextId = 1;
+  private readonly IMongoCollection<Product> _products;
 
     private readonly IValidator<Product> _validator;
+    private readonly MongoDB.Driver.IMongoCollection<Hypesoft.Domain.Entities.Category> _categories;
 
-    public ProductsController(IValidator<Product> validator)
+    public ProductsController(IValidator<Product> validator, Hypesoft.API.Services.MongoDbService mongoDbService)
     {
       _validator = validator;
+      _categories = mongoDbService.GetCollection<Hypesoft.Domain.Entities.Category>("Categories");
+      _products = mongoDbService.GetCollection<Product>("Products");
     }
 
     // GET /api/products
     [HttpGet]
     public ActionResult<IEnumerable<Product>> GetAllProducts()
     {
-      return Ok(Products);
+      var products = _products.Find(_ => true).ToList();
+      return Ok(products);
     }
 
     // GET /api/products/{id}
     [HttpGet("{id}")]
     public ActionResult<object> GetProductById(int id)
     {
-      var product = Products.FirstOrDefault(p => p.Id == id);
+      var product = _products.Find(p => p.Id == id).FirstOrDefault();
       if (product == null)
         return NotFound(new { message = "Product not found." });
 
@@ -48,13 +52,15 @@ namespace Hypesoft.API.Controllers
         return BadRequest(new { message = "Product name is required." });
 
       // Verifica categoria
-      var category = CategoriesController.Categories.FirstOrDefault(c => c.Id == product.CategoryId);
+      var category = _categories.Find(MongoDB.Driver.Builders<Hypesoft.Domain.Entities.Category>.Filter.Eq(c => c.Id, product.CategoryId)).FirstOrDefault();
       if (category == null)
         return BadRequest(new { message = "Invalid category." });
 
-      product.Id = nextId++;
+      // Gerar id incremental
+      var last = _products.Find(_ => true).SortByDescending(p => p.Id).Limit(1).FirstOrDefault();
+      product.Id = last != null ? last.Id + 1 : 1;
       product.CategoryName = category.Name;
-      Products.Add(product);
+      _products.InsertOne(product);
 
       return CreatedAtAction(nameof(GetProductById),
           new { id = product.Id },
@@ -65,7 +71,8 @@ namespace Hypesoft.API.Controllers
     [HttpPut("{id}")]
     public IActionResult UpdateProduct(int id, [FromBody] Product updatedProduct)
     {
-      var existingProduct = Products.FirstOrDefault(p => p.Id == id);
+      var filter = Builders<Product>.Filter.Eq(p => p.Id, id);
+      var existingProduct = _products.Find(filter).FirstOrDefault();
       if (existingProduct == null)
         return NotFound(new { message = "Product not found." });
 
@@ -79,30 +86,31 @@ namespace Hypesoft.API.Controllers
         });
       }
 
-      var category = CategoriesController.Categories.FirstOrDefault(c => c.Id == updatedProduct.CategoryId);
+      var category = _categories.Find(MongoDB.Driver.Builders<Hypesoft.Domain.Entities.Category>.Filter.Eq(c => c.Id, updatedProduct.CategoryId)).FirstOrDefault();
       if (category == null)
         return BadRequest(new { message = "Invalid category." });
 
-      existingProduct.Name = updatedProduct.Name;
-      existingProduct.Description = updatedProduct.Description;
-      existingProduct.Price = updatedProduct.Price;
-      existingProduct.Stock = updatedProduct.Stock;
-      existingProduct.CategoryId = updatedProduct.CategoryId;
-      existingProduct.CategoryName = category.Name;
-
-      return Ok(new { message = "Product updated successfully.", data = existingProduct });
+      var update = Builders<Product>.Update
+        .Set(p => p.Name, updatedProduct.Name)
+        .Set(p => p.Description, updatedProduct.Description)
+        .Set(p => p.Price, updatedProduct.Price)
+        .Set(p => p.Stock, updatedProduct.Stock)
+        .Set(p => p.CategoryId, updatedProduct.CategoryId)
+        .Set(p => p.CategoryName, category.Name);
+      _products.UpdateOne(filter, update);
+      var updated = _products.Find(filter).FirstOrDefault();
+      return Ok(new { message = "Product updated successfully.", data = updated });
     }
 
     // DELETE /api/products/{id}
     [HttpDelete("{id}")]
     public IActionResult DeleteProduct(int id)
     {
-      var product = Products.FirstOrDefault(p => p.Id == id);
-      if (product == null)
+      var filter = Builders<Product>.Filter.Eq(p => p.Id, id);
+      var result = _products.DeleteOne(filter);
+      if (result.DeletedCount == 0)
         return NotFound(new { message = "Product not found." });
-
-      Products.Remove(product);
-      return Ok(new { message = "Product deleted successfully.", data = product });
+      return Ok(new { message = "Product deleted successfully." });
     }
 
     // GET /api/products/search?name=...
@@ -112,9 +120,8 @@ namespace Hypesoft.API.Controllers
       if (string.IsNullOrWhiteSpace(name))
         return BadRequest(new { message = "Search term cannot be empty." });
 
-      var results = Products
-          .Where(p => p.Name.ToLower().Contains(name.ToLower()))
-          .ToList();
+      var filter = Builders<Product>.Filter.Regex(p => p.Name, new MongoDB.Bson.BsonRegularExpression(name, "i"));
+      var results = _products.Find(filter).ToList();
 
       if (!results.Any())
         return NotFound(new { message = "No products found matching the search term." });
@@ -129,12 +136,11 @@ namespace Hypesoft.API.Controllers
       if (string.IsNullOrWhiteSpace(category))
         return BadRequest(new { message = "Category cannot be empty." });
 
-      var cat = CategoriesController.Categories
-          .FirstOrDefault(c => c.Name.ToLower() == category.ToLower());
+      var cat = _categories.Find(MongoDB.Driver.Builders<Hypesoft.Domain.Entities.Category>.Filter.Eq(c => c.Name, category)).FirstOrDefault();
       if (cat == null)
         return NotFound(new { message = "Category not found." });
 
-      var results = Products.Where(p => p.CategoryId == cat.Id).ToList();
+      var results = _products.Find(p => p.CategoryId == cat.Id).ToList();
 
       if (!results.Any())
         return NotFound(new { message = "No products found for this category." });
