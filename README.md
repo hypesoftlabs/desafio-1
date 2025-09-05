@@ -2,6 +2,8 @@
 Projeto para gerenciamento de produtos e categorias, desenvolvido como teste técnico.  
 Funcionalidades incluem cadastro de produtos e categorias, controle de estoque, busca/filtragem e dashboard básico com gráfico.  
 
+[Video de Apresentação do Projeto](https://youtu.be/XXvd-yHBp9k)
+
 Tecnologias principais:
 - **Backend:** .NET 9, C#, FluentValidation
 - **Banco de dados:** MongoDB (inicialmente em memória)  
