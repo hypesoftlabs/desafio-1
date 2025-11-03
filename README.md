@@ -8,7 +8,7 @@ Bem-vindo ao desafio técnico da Hypesoft! Este projeto consiste no desenvolvime
 
 O design da aplicação deve seguir o padrão visual moderno demonstrado neste protótipo:
 
-**ShopSense Dashboard - Product Page**: https://dribbble.com/shots/24508262-ShopSense-Dashboard-Product-Page
+**ShopSense Dashboard - Product Page**: [https://dribbble.com/shots/24508262-ShopSense-Dashboard-Product-Page](https://dribbble.com/shots/24351485-ShopSense-Sales-Dashboard)
 
 ## Requisitos do Sistema
 
