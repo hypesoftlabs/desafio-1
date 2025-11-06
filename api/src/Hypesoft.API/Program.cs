@@ -1,5 +1,9 @@
-﻿using Hypesoft.Infrastructure.Config;
+﻿using Hypesoft.Application.Interface;
+using Hypesoft.Application.Services;
+using Hypesoft.Domain.Interfaces;
+using Hypesoft.Infrastructure.Config;
 using Hypesoft.Infrastructure.Context;
+using Hypesoft.Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,8 +21,14 @@ builder.Services.AddSingleton(sp =>
     return new MongoDbContext(settings);
 });
 
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -49,6 +59,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 
 var summaries = new[]
 {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +10,10 @@ namespace Hypesoft.Domain.Entity
 {
     public class Category
     {
-        public int Id { get; private set; }
-        public string Name { get; private set; } = string.Empty;
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+        public string Name { get; set; } = string.Empty;
 
     }
 }
