@@ -1,15 +1,51 @@
+﻿using Hypesoft.Infrastructure.Config;
+using Hypesoft.Infrastructure.Context;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<MongoDbSettings>(
+    builder.Configuration.GetSection("MongoDbSettings")
+);
+
+// Injeta como Singleton
+builder.Services.AddSingleton(sp =>
+{
+    var settings = sp.GetRequiredService<IConfiguration>()
+        .GetSection("MongoDbSettings")
+        .Get<MongoDbSettings>();
+
+    return new MongoDbContext(settings);
+});
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var mongoService = scope.ServiceProvider.GetRequiredService<MongoDbContext>();
+
+    try
+    {
+        
+        var db = mongoService.GetCollection<object>("test");
+        Console.WriteLine("✅ Conexão MongoDB realizada com sucesso!");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"❌ Erro ao conectar ao MongoDB: {ex.Message}");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

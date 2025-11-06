@@ -5,6 +5,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{89BA7EA8-7227-4C97-BC48-B78886EF7A80}|Hypesoft.API\\Hypesoft.API.csproj|c:\\users\\eduardo\\desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\hypesoft.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89BA7EA8-7227-4C97-BC48-B78886EF7A80}|Hypesoft.API\\Hypesoft.API.csproj|solutionrelative:hypesoft.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{132F926C-E7C1-4F04-BFA1-C795782A6F6A}|Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj|c:\\users\\eduardo\\desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\hypesoft.infrastructure\\context\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{132F926C-E7C1-4F04-BFA1-C795782A6F6A}|Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj|solutionrelative:hypesoft.infrastructure\\context\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF2EB1E-A6BB-4BD0-AA46-A488E8577A49}|Hypesoft.Domain\\Hypesoft.Domain.csproj|c:\\users\\eduardo\\desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\hypesoft.domain\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DF2EB1E-A6BB-4BD0-AA46-A488E8577A49}|Hypesoft.Domain\\Hypesoft.Domain.csproj|solutionrelative:hypesoft.domain\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DF2EB1E-A6BB-4BD0-AA46-A488E8577A49}|Hypesoft.Domain\\Hypesoft.Domain.csproj|c:\\users\\eduardo\\desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\hypesoft.domain\\entity\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DF2EB1E-A6BB-4BD0-AA46-A488E8577A49}|Hypesoft.Domain\\Hypesoft.Domain.csproj|solutionrelative:hypesoft.domain\\entity\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{132F926C-E7C1-4F04-BFA1-C795782A6F6A}|Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj|c:\\users\\eduardo\\desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\hypesoft.infrastructure\\config\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{132F926C-E7C1-4F04-BFA1-C795782A6F6A}|Hypesoft.Infrastructure\\Hypesoft.Infrastructure.csproj|solutionrelative:hypesoft.infrastructure\\config\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89BA7EA8-7227-4C97-BC48-B78886EF7A80}|Hypesoft.API\\Hypesoft.API.csproj|c:\\users\\eduardo\\desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\hypesoft.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{89BA7EA8-7227-4C97-BC48-B78886EF7A80}|Hypesoft.API\\Hypesoft.API.csproj|solutionrelative:hypesoft.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Hypesoft.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.API\\appsettings.json",
+              "RelativeToolTip": "Hypesoft.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-06T18:44:29.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Infrastructure\\Context\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "Hypesoft.Infrastructure\\Context\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Infrastructure\\Context\\MongoDbContext.cs",
+              "RelativeToolTip": "Hypesoft.Infrastructure\\Context\\MongoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T18:43:17.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MongoDbSettings.cs",
+              "DocumentMoniker": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Infrastructure\\Config\\MongoDbSettings.cs",
+              "RelativeDocumentMoniker": "Hypesoft.Infrastructure\\Config\\MongoDbSettings.cs",
+              "ToolTip": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Infrastructure\\Config\\MongoDbSettings.cs",
+              "RelativeToolTip": "Hypesoft.Infrastructure\\Config\\MongoDbSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T18:41:54.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Domain\\Entity\\Category.cs",
+              "RelativeDocumentMoniker": "Hypesoft.Domain\\Entity\\Category.cs",
+              "ToolTip": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Domain\\Entity\\Category.cs",
+              "RelativeToolTip": "Hypesoft.Domain\\Entity\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T18:11:50.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Domain\\Entity\\Product.cs",
+              "RelativeDocumentMoniker": "Hypesoft.Domain\\Entity\\Product.cs",
+              "ToolTip": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.Domain\\Entity\\Product.cs",
+              "RelativeToolTip": "Hypesoft.Domain\\Entity\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T18:10:15.873Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.API\\Program.cs",
               "RelativeDocumentMoniker": "Hypesoft.API\\Program.cs",
-              "ToolTip": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.API\\Program.cs",
-              "RelativeToolTip": "Hypesoft.API\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\EDUARDO\\Desktop\\desafio hypersoft\\challenge-hypersoft\\desafio-1\\api\\src\\Hypesoft.API\\Program.cs*",
+              "RelativeToolTip": "Hypesoft.API\\Program.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T02:53:06.239Z",
               "EditorCaption": ""

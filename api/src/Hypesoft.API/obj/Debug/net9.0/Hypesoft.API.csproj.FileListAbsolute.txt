@@ -37,4 +37,13 @@ C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src
 C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.API\obj\Debug\net9.0\Hypesoft.API.pdb
 C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.API\obj\Debug\net9.0\Hypesoft.API.genruntimeconfig.cache
 C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.API\obj\Debug\net9.0\ref\Hypesoft.API.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\DnsClient.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\MongoDB.Bson.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\SharpCompress.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\Snappier.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\ZstdSharp.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\api\src\Hypesoft.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
