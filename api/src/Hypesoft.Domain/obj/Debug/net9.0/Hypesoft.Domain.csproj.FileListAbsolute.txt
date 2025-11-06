@@ -1,0 +1,12 @@
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\bin\Debug\net9.0\Hypesoft.Domain.deps.json
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\bin\Debug\net9.0\Hypesoft.Domain.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\bin\Debug\net9.0\Hypesoft.Domain.pdb
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\Hypesoft.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\Hypesoft.Domain.AssemblyInfoInputs.cache
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\Hypesoft.Domain.AssemblyInfo.cs
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\Hypesoft.Domain.csproj.CoreCompileInputs.cache
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\Hypesoft.Domain.sourcelink.json
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\Hypesoft.Domain.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\refint\Hypesoft.Domain.dll
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\Hypesoft.Domain.pdb
+C:\Users\EDUARDO\Desktop\desafio hypersoft\challenge-hypersoft\desafio-1\API\src\Hypesoft.Domain\obj\Debug\net9.0\ref\Hypesoft.Domain.dll
