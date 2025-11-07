@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hypersoft-api
+    env_file:
+      - ./api/src/Hypesoft.API/.env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - MONGO_CONNECTION_STRING=${MONGO_CONNECTION_STRING}
+      - MONGO_DATABASE_NAME=${MONGO_DATABASE_NAME}
+    ports:
+      - "8080:8080"

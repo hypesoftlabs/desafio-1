@@ -1,0 +1,30 @@
+# Binários e objetos do .NET
+bin/
+obj/
+
+# Configurações do VS/IDE
+.vs/
+*.user
+*.suo
+*.sln.ide
+
+# Logs
+*.log
+
+# Arquivos de build locais
+*.dockerfile
+Dockerfile
+
+# Npm / Node (caso use front-end no mesmo projeto)
+node_modules/
+dist/
+
+# Git
+.git
+.gitignore
+
+# Arquivos temporários do sistema
+*.swp
+*.tmp
+*.bak
+*.DS_Store
