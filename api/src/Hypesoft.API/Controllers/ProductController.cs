@@ -28,7 +28,7 @@ namespace Hypesoft.API.Controllers
         public async Task<IActionResult> CreateProduct([FromBody] ProductDto dto)
         {
             var newProduct = await _service.AddAsync(dto);
-            return CreatedAtAction(nameof(GetProductById), new { id = newProduct.Id }, newProduct);
+            return CreatedAtAction(nameof(GetProductById), new { id = newProduct.Id }, newProduct); 
         }
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(string id, [FromBody] Hypesoft.Application.Dtos.ProductDto dto)

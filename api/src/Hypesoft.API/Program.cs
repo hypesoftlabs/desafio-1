@@ -1,23 +1,30 @@
-﻿using Hypesoft.Application.Interface;
+﻿using DotNetEnv;
+using FluentValidation.AspNetCore;
+using Hypesoft.Application.Interface;
 using Hypesoft.Application.Services;
 using Hypesoft.Domain.Interfaces;
 using Hypesoft.Infrastructure.Config;
 using Hypesoft.Infrastructure.Context;
 using Hypesoft.Infrastructure.Repository;
+using Microsoft.Extensions.Options;
 
+Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<MongoDbSettings>(
-    builder.Configuration.GetSection("MongoDbSettings")
-);
-
-// Injeta como Singleton
-builder.Services.AddSingleton(sp =>
+var mongoSettings = new MongoDbSettings
 {
-    var settings = sp.GetRequiredService<IConfiguration>()
-        .GetSection("MongoDbSettings")
-        .Get<MongoDbSettings>();
+    ConnectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRING"),
+    DatabaseName = Environment.GetEnvironmentVariable("MONGO_DATABASE_NAME")
+};
+builder.Services.Configure<MongoDbSettings>(opt =>
+{
+    opt.ConnectionString = mongoSettings.ConnectionString;
+    opt.DatabaseName = mongoSettings.DatabaseName;
+});
 
+builder.Services.AddSingleton<MongoDbContext>(sp =>
+{
+    var settings = sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
     return new MongoDbContext(settings);
 });
 
@@ -28,7 +35,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>());
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
