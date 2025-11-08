@@ -81,24 +81,35 @@ namespace ShopAPI.Infrastructure.Repositories
         
         }
 
-        public async Task<Pagination<Product>> GetLowStorageItemsAsync(int stockLimit, int pageNumber, int pageSize)
+        public async Task<List<Product>> GetLowStorageItemsAsync(int stockLimit)
         {
-        
-            var query = _context.Products
-                              .Where(p => p.Quantity < stockLimit) 
-                              .AsQueryable();
 
-       
-            var totalCount = await query.CountAsync();
+            return await _context.Products
+                            .Where(p => p.Quantity < stockLimit)
+                            .ToListAsync();
+        }
 
-         
-            var items = await query
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
+        public async Task<bool> HasProductsInTheCategory(string categoryId)
+        {
+            return await _context.Products
+                         .AnyAsync(p => p.CategoryId == categoryId);
+        }
 
-      
-            return new Pagination<Product>(items, totalCount, pageNumber, pageSize);
+        public async Task<long> GetTotalCountAsync()
+        {
+            return await _context.Products.LongCountAsync();
+        }
+
+        public async Task<double> GetStorageTotalValueAsync()
+        {
+            var products = await _context.Products.ToListAsync();
+
+            return products.Sum(p => p.Price * p.Quantity);
+        }
+
+        public async Task<IEnumerable<Product>> GetFullListAsync()
+        {
+            return await _context.Products.ToListAsync();
         }
     }
 }

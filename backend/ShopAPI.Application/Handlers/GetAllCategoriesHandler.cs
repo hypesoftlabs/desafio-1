@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace ShopAPI.Application.Handlers
 {
-    public class GetAllCategoriesQueryHandler : IRequestHandler<GetAllCategoriesQuery, IEnumerable<CategoryDTO>>
+    public class GetAllCategoriesHandler : IRequestHandler<GetAllCategoriesQuery, IEnumerable<CategoryDTO>>
     {
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
 
-        public GetAllCategoriesQueryHandler(ICategoryRepository categoriaRepository, IMapper mapper)
+        public GetAllCategoriesHandler(ICategoryRepository categoriaRepository, IMapper mapper)
         {
             _categoryRepository = categoriaRepository;
             _mapper = mapper;

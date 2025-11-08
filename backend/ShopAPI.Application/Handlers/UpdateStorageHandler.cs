@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ShopAPI.Application.Handlers
 {
-    public class UpdateStorageCommandHandler : IRequestHandler<UpdateStorageCommand, bool>
+    public class UpdateStorageHandler : IRequestHandler<UpdateStorageCommand, bool>
     {
         private readonly IProductRepository _productRepository;
 
-        public UpdateStorageCommandHandler(IProductRepository productRepository)
+        public UpdateStorageHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }

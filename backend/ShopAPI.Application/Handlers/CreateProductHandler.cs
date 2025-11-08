@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ShopAPI.Application.Handlers
 {
-    public class CreateProductCommandHandler(IProductRepository produtoRepository) : IRequestHandler<CreateProductCommand, string>
+    public class CreateProductHandler(IProductRepository produtoRepository) : IRequestHandler<CreateProductCommand, string>
     {
         private readonly IProductRepository _productRepository = produtoRepository;
 

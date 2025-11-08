@@ -8,12 +8,12 @@ using ShopAPI.Domain.Repositories;
 
 namespace ShopAPI.Application.Handlers
 {
-    public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, Pagination<ProductDTO>>
+    public class GetAllProductsHandler : IRequestHandler<GetAllProductsQuery, Pagination<ProductDTO>>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
 
-        public GetAllProductsQueryHandler(IProductRepository produtoRepository, IMapper mapper)
+        public GetAllProductsHandler(IProductRepository produtoRepository, IMapper mapper)
         {
             _productRepository = produtoRepository;
             _mapper = mapper;

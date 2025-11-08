@@ -20,24 +20,6 @@ namespace ShopAPI.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("low-storage")]
-        public async Task<ActionResult<Pagination<ProductDTO>>> GetLowStorage(
-        [FromQuery] int pageNumber = 1,
-        [FromQuery] int pageSize = 10)
-        {
-      
-            var query = new GetLowStorageProductsQuery
-            {
-                PageNumber = pageNumber,
-                PageSize = pageSize
-            };
-
-          
-            var result = await _mediator.Send(query);
-
-         
-            return Ok(result);
-        }
 
         [HttpPatch("{id}/storage")]
         public async Task<IActionResult> UpdateStorage(

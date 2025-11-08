@@ -9,29 +9,38 @@ using System.Threading.Tasks;
 
 namespace ShopAPI.Application.Handlers
 {
-    public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, bool>
+    public class EditProductHandler : IRequestHandler<EditProductCommand, bool>
     {
         private readonly IProductRepository _produtoRepository;
 
-        public DeleteProductCommandHandler(IProductRepository produtoRepository)
+     
+        public EditProductHandler(IProductRepository produtoRepository)
         {
             _produtoRepository = produtoRepository;
         }
 
-        public async Task<bool> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
+    
+        public async Task<bool> Handle(EditProductCommand request, CancellationToken cancellationToken)
         {
-         
+          
             var produto = await _produtoRepository.GetByIdAsync(request.Id);
 
             if (produto == null)
             {
                 return false;
             }
-       
-            await _produtoRepository.DeleteAsync(produto.Id);
+
+        
+            produto.ChangeName(request.Name);
+            produto.ChangeDescription(request.Description);
+            produto.ChangePrice(request.Price);
+            produto.ChangeCategory(request.CategoryId);
+            produto.ChangeQuantity(request.Quantity);
+
+ 
+            await _produtoRepository.UpdateAsync(produto);
 
             return true;
         }
     }
-
 }
