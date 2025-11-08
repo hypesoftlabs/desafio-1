@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using ShopAPI.Application.DTOs;
 using ShopAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ShopAPI.Application.Queries
 {
-    public class GetAllProductsQuery : IRequest<IEnumerable<Product>>
+    public class GetAllProductsQuery : IRequest<IEnumerable<ProductDTO>>
     {
     }
 }

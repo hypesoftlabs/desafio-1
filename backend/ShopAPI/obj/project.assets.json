@@ -3089,6 +3089,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "AutoMapper >= 15.1.0",
       "LH.SwaggerDoc >= 8.0.2",
       "Microsoft.AspNetCore.OpenApi >= 9.0.2",
       "Serilog.AspNetCore >= 9.0.0",
@@ -3153,6 +3154,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[15.1.0, )"
+          },
           "LH.SwaggerDoc": {
             "target": "Package",
             "version": "[8.0.2, )"

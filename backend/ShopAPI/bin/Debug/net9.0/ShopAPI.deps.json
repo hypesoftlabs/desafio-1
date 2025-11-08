@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "ShopAPI/1.0.0": {
         "dependencies": {
+          "AutoMapper": "15.1.0",
           "LH.SwaggerDoc": "8.0.2",
           "Microsoft.AspNetCore.OpenApi": "9.0.2",
           "Serilog.AspNetCore": "9.0.0",

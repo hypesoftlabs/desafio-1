@@ -1,6 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
-using ShopAPI.Application; // <-- Importa o IAssemblyMarker
+using ShopAPI.Application;
 using ShopAPI.Domain.Repositories;
 using ShopAPI.Infrastructure.Data;
 using ShopAPI.Infrastructure.Repositories;
@@ -18,6 +18,10 @@ builder.Services.AddDbContext<ShopDbContext>(
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(IAssemblyMarker).Assembly));
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<ShopAPI.Application.Mappings.MappingProfile>();
+});
 
 
 builder.Services.AddControllers();

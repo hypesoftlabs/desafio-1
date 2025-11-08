@@ -289,6 +289,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[15.1.0, )"
+            },
             "LH.SwaggerDoc": {
               "target": "Package",
               "version": "[8.0.2, )"
