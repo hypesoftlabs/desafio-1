@@ -7,13 +7,10 @@
       "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\getallproductsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\updatestoragecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79AFE1FC-3AD6-4B35-BABE-D0873ED3FB58}|..\\ShopAPI.Domain\\ShopAPI.Domain.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.domain\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4E72077-1454-46DD-A46E-830492E8B9F3}|..\\ShopAPI.Infrastructure\\ShopAPI.Infrastructure.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\validators\\updatestoragevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,8 +20,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateStorageValidator.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Validators\\UpdateStorageValidator.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Validators\\UpdateStorageValidator.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Validators\\UpdateStorageValidator.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Validators\\UpdateStorageValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T18:21:00.731Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -33,48 +43,22 @@
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwC4AAABfAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwBYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T16:47:46.146Z",
+              "WhenOpened": "2025-11-08T18:17:34.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetAllProductsQueryHandler.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
-              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAASwBwAAAAAAAAAAAAAAA==",
+              "Title": "UpdateStorageCommandHandler.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\UpdateStorageCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\UpdateStorageCommandHandler.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\UpdateStorageCommandHandler.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\UpdateStorageCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T16:44:53.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
-              "RelativeToolTip": "..\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T16:44:37.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
-              "RelativeToolTip": "..\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T16:44:34.556Z",
+              "WhenOpened": "2025-11-08T18:15:09.992Z",
               "EditorCaption": ""
             }
           ]

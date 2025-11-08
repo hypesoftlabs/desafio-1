@@ -81,5 +81,24 @@ namespace ShopAPI.Infrastructure.Repositories
         
         }
 
-}
+        public async Task<Pagination<Product>> GetLowStorageItemsAsync(int stockLimit, int pageNumber, int pageSize)
+        {
+        
+            var query = _context.Products
+                              .Where(p => p.Quantity < stockLimit) 
+                              .AsQueryable();
+
+       
+            var totalCount = await query.CountAsync();
+
+         
+            var items = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+      
+            return new Pagination<Product>(items, totalCount, pageNumber, pageSize);
+        }
+    }
 }

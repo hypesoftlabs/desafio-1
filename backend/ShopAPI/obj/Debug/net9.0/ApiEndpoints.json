@@ -130,6 +130,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ShopAPI.Controllers.ProductController",
+    "Method": "UpdateStorage",
+    "RelativePath": "api/Product/{id}/storage",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "ShopAPI.Application.Commands.UpdateStorageCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopAPI.Controllers.ProductController",
+    "Method": "GetLowStorage",
+    "RelativePath": "api/Product/low-storage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ShopAPI.Application.Common.Pagination\u00601[[ShopAPI.Application.DTOs.ProductDTO, ShopAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SwaggerDoc.SwaggerController",
     "Method": "Doc",
     "RelativePath": "doc",

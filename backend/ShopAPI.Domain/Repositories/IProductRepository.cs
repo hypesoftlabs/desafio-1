@@ -9,6 +9,7 @@ namespace ShopAPI.Domain.Repositories
     {
         Task<Product?> GetByIdAsync(string id);
         Task<Pagination<Product>> GetAllAsync(string? nome, string? categoryId, int pageNumber, int pageSize);
+        Task<Pagination<Product>> GetLowStorageItemsAsync(int stockLimit, int pageNumber, int pageSize);
         Task AddAsync(Product product);
         Task UpdateAsync(Product product); 
         Task DeleteAsync(string id); 
