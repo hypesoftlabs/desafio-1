@@ -293,6 +293,14 @@
               "target": "Package",
               "version": "[15.1.0, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.1.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.0, )"
+            },
             "LH.SwaggerDoc": {
               "target": "Package",
               "version": "[8.0.2, )"

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopAPI.Application.Commands;
+using ShopAPI.Application.DTOs;
 using ShopAPI.Application.Queries;
 using ShopAPI.Domain.Entities;
 
@@ -20,7 +21,7 @@ namespace ShopAPI.Controllers
 
       
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Category>>> GetAllCategories()
+        public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetAllCategories()
         {
             var query = new GetAllCategoriesQuery();
             var categorias = await _mediator.Send(query);

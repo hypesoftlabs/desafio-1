@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using ShopAPI.Application.DTOs;
 using ShopAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace ShopAPI.Application.Queries
 {
-    public class GetAllCategoriesQuery: IRequest<IEnumerable<Category>>
+    public class GetAllCategoriesQuery: IRequest<IEnumerable<CategoryDTO>>
     {
-        // Vazia, pois é só a "mensagem"
+      
     }
 }

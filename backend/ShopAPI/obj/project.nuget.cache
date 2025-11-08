@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+ohIBb5p+H8=",
+  "dgSpecHash": "3OA4tkrRxlw=",
   "success": true,
   "projectFilePath": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\ShopAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\helo_\\.nuget\\packages\\automapper\\15.1.0\\automapper.15.1.0.nupkg.sha512",
     "C:\\Users\\helo_\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\helo_\\.nuget\\packages\\fluentvalidation\\12.1.0\\fluentvalidation.12.1.0.nupkg.sha512",
+    "C:\\Users\\helo_\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.0\\fluentvalidation.dependencyinjectionextensions.12.1.0.nupkg.sha512",
     "C:\\Users\\helo_\\.nuget\\packages\\lh.swaggerdoc\\8.0.2\\lh.swaggerdoc.8.0.2.nupkg.sha512",
     "C:\\Users\\helo_\\.nuget\\packages\\mediatr\\13.1.0\\mediatr.13.1.0.nupkg.sha512",
     "C:\\Users\\helo_\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -4,6 +4,7 @@ using ShopAPI.Application;
 using ShopAPI.Domain.Repositories;
 using ShopAPI.Infrastructure.Data;
 using ShopAPI.Infrastructure.Repositories;
+using FluentValidation;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +23,7 @@ builder.Services.AddAutoMapper(cfg =>
 {
     cfg.AddProfile<ShopAPI.Application.Mappings.MappingProfile>();
 });
+builder.Services.AddValidatorsFromAssembly(typeof(IAssemblyMarker).Assembly);
 
 
 builder.Services.AddControllers();

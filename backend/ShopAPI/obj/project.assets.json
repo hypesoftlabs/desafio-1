@@ -49,6 +49,23 @@
           }
         }
       },
+      "FluentValidation.DependencyInjectionExtensions/12.1.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "12.1.0",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "LH.SwaggerDoc/8.0.2": {
         "type": "package",
         "dependencies": {
@@ -1187,6 +1204,21 @@
         "fluentvalidation.nuspec",
         "lib/net8.0/FluentValidation.dll",
         "lib/net8.0/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/12.1.0": {
+      "sha512": "p9ZnpVCUvkelSfqFYZP9aMtnuRlDRkrAAPqjQGG+1mVVn8zxE0bc1/RAFRBZKsPglbMBQOx8wXOZhg2fGstacQ==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/12.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.12.1.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/net8.0/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
     "LH.SwaggerDoc/8.0.2": {
@@ -3090,6 +3122,8 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "AutoMapper >= 15.1.0",
+      "FluentValidation >= 12.1.0",
+      "FluentValidation.DependencyInjectionExtensions >= 12.1.0",
       "LH.SwaggerDoc >= 8.0.2",
       "Microsoft.AspNetCore.OpenApi >= 9.0.2",
       "Serilog.AspNetCore >= 9.0.0",
@@ -3157,6 +3191,14 @@
           "AutoMapper": {
             "target": "Package",
             "version": "[15.1.0, )"
+          },
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[12.1.0, )"
+          },
+          "FluentValidation.DependencyInjectionExtensions": {
+            "target": "Package",
+            "version": "[12.1.0, )"
           },
           "LH.SwaggerDoc": {
             "target": "Package",
