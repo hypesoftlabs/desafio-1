@@ -3,33 +3,18 @@
   "WorkspaceRootPath": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4E72077-1454-46DD-A46E-830492E8B9F3}|..\\ShopAPI.Infrastructure\\ShopAPI.Infrastructure.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.infrastructure\\shopapi.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\shopapi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79AFE1FC-3AD6-4B35-BABE-D0873ED3FB58}|..\\ShopAPI.Domain\\ShopAPI.Domain.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.domain\\shopapi.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\getallproductsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\shopapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:shopapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\queries\\getallproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,105 +29,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ShopAPI.Infrastructure",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Infrastructure\\ShopAPI.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Infrastructure\\ShopAPI.Infrastructure.csproj",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Infrastructure\\ShopAPI.Infrastructure.csproj",
-              "RelativeToolTip": "..\\ShopAPI.Infrastructure\\ShopAPI.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-05T20:27:45.074Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-08T01:05:38.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ShopAPI.Application",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\ShopAPI.Application.csproj",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\ShopAPI.Application.csproj",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\ShopAPI.Application.csproj",
-              "RelativeToolTip": "..\\ShopAPI.Application\\ShopAPI.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-05T20:25:42.858Z",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T01:02:18.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ShopAPI.Domain",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Domain\\ShopAPI.Domain.csproj",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Domain\\ShopAPI.Domain.csproj",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Domain\\ShopAPI.Domain.csproj",
-              "RelativeToolTip": "..\\ShopAPI.Domain\\ShopAPI.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-05T20:23:52.824Z",
+              "Title": "GetAllProductsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T00:56:08.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ShopAPI",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\ShopAPI.csproj",
-              "RelativeDocumentMoniker": "ShopAPI.csproj",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\ShopAPI.csproj",
-              "RelativeToolTip": "ShopAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-05T20:11:46.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-05T20:00:45.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "GetAllProductsQuery.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T20:00:14.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T20:00:11.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T20:00:04.905Z",
+              "WhenOpened": "2025-11-08T00:54:41.524Z",
               "EditorCaption": ""
             }
           ]

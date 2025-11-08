@@ -1,0 +1,13 @@
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\bin\Debug\net9.0\ShopAPI.Domain.deps.json
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\bin\Debug\net9.0\ShopAPI.Domain.dll
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\bin\Debug\net9.0\ShopAPI.Domain.pdb
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.csproj.AssemblyReference.cache
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.AssemblyInfoInputs.cache
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.AssemblyInfo.cs
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.sourcelink.json
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.dll
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\refint\ShopAPI.Domain.dll
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ShopAPI.Domain.pdb
+C:\Projetos\desafio-1\backend\ShopAPI.Domain\obj\Debug\net9.0\ref\ShopAPI.Domain.dll

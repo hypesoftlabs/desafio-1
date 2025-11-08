@@ -1,23 +1,40 @@
+
+using Microsoft.EntityFrameworkCore;
+using ShopAPI.Application; // <-- Importa o IAssemblyMarker
+using ShopAPI.Domain.Repositories;
+using ShopAPI.Infrastructure.Data;
+using ShopAPI.Infrastructure.Repositories;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+var connectionString = builder.Configuration.GetConnectionString("MongoDb");
+builder.Services.AddDbContext<ShopDbContext>(
+    options => options.UseMongoDB(connectionString, "shopDatabase") 
+);
+
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(IAssemblyMarker).Assembly));
+
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
-app.MapControllers();
-
+app.MapControllers(); 
 app.Run();
