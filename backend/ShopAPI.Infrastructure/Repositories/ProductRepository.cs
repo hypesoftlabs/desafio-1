@@ -27,7 +27,7 @@ namespace ShopAPI.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Pagination<Product>> GetAllAsync(string? name, int pageNumber, int pageSize)
+        public async Task<Pagination<Product>> GetAllAsync(string? name, string? categoryId, int pageNumber, int pageSize)
         {
             var query = _context.Products.AsQueryable();
 
@@ -35,6 +35,11 @@ namespace ShopAPI.Infrastructure.Repositories
             {
             
                 query = query.Where(p => p.Name.ToLower().Contains(name.ToLower()));
+            }
+
+            if (!string.IsNullOrWhiteSpace(categoryId))
+            {
+                query = query.Where(p => p.CategoryId == categoryId);
             }
 
             var totalCount = await query.CountAsync();

@@ -23,7 +23,7 @@ namespace ShopAPI.Application.Handlers
         public async Task<Pagination<ProductDTO>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
             
-            var products = await _productRepository.GetAllAsync(request.Name, request.PageNumber,request.PageSize);
+            var products = await _productRepository.GetAllAsync(request.Name, request.CategoryId, request.PageNumber,request.PageSize);
 
             var productsDTO = _mapper.Map<List<ProductDTO>>(products.Data);
 

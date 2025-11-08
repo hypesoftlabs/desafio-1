@@ -13,6 +13,7 @@ namespace ShopAPI.Application.Queries
     public class GetAllProductsQuery : IRequest<Pagination<ProductDTO>>
     {
         public string? Name { get; set; }
+        public string? CategoryId { get; set; }
         public int PageNumber { get; set; } = 1; 
         public int PageSize { get; set; } = 10; 
     }

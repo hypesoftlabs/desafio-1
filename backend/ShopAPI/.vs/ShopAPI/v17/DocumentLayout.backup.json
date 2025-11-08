@@ -3,6 +3,16 @@
   "WorkspaceRootPath": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\getallproductsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79AFE1FC-3AD6-4B35-BABE-D0873ED3FB58}|..\\ShopAPI.Domain\\ShopAPI.Domain.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.domain\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4E72077-1454-46DD-A46E-830492E8B9F3}|..\\ShopAPI.Infrastructure\\ShopAPI.Infrastructure.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,14 +28,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwC4AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T16:47:46.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetAllProductsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\GetAllProductsQueryHandler.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAASwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T16:44:53.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "..\\ShopAPI.Domain\\Repositories\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T16:44:37.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "..\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
               "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
               "RelativeToolTip": "..\\ShopAPI.Infrastructure\\Repositories\\ProductRepository.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T16:38:30.338Z",
+              "WhenOpened": "2025-11-08T16:44:34.556Z",
               "EditorCaption": ""
             }
           ]

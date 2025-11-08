@@ -24,6 +24,7 @@ namespace ShopAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductDTO>>> GetAllProducts(
             [FromQuery] string? name,
+            [FromQuery] string? categoryId,
             [FromQuery] int pageNumber = 1, 
             [FromQuery] int pageSize = 10  
             )
@@ -32,6 +33,7 @@ namespace ShopAPI.Controllers
             var query = new GetAllProductsQuery
             {
                 Name = name,
+                CategoryId = categoryId,
                 PageNumber = pageNumber,
                 PageSize = pageSize
             };
