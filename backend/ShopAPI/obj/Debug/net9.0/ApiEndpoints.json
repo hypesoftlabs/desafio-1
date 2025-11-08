@@ -93,6 +93,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ShopAPI.Controllers.ProductController",
+    "Method": "ExcluirProduto",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SwaggerDoc.SwaggerController",
     "Method": "Doc",
     "RelativePath": "doc",

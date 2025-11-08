@@ -7,10 +7,10 @@
       "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\editproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\validators\\editproductcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\commands\\deleteproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,35 +30,35 @@
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwD8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAiwE0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T14:41:54.905Z",
+              "WhenOpened": "2025-11-08T14:51:12.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EditProductCommandHandler.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\EditProductCommandHandler.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\EditProductCommandHandler.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\EditProductCommandHandler.cs",
-              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\EditProductCommandHandler.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwCYAAAAAAAAAAAAAAA==",
+              "Title": "DeleteProductCommandHandler.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\DeleteProductCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\DeleteProductCommandHandler.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\DeleteProductCommandHandler.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\DeleteProductCommandHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T14:37:24.219Z",
+              "WhenOpened": "2025-11-08T14:49:14.991Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EditProductCommandValidator.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Validators\\EditProductCommandValidator.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Validators\\EditProductCommandValidator.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Validators\\EditProductCommandValidator.cs",
-              "RelativeToolTip": "..\\ShopAPI.Application\\Validators\\EditProductCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Title": "DeleteProductCommand.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Commands\\DeleteProductCommand.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Commands\\DeleteProductCommand.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Commands\\DeleteProductCommand.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Commands\\DeleteProductCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T14:31:56.341Z",
+              "WhenOpened": "2025-11-08T14:47:51.961Z",
               "EditorCaption": ""
             }
           ]

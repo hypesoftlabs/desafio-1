@@ -61,5 +61,23 @@ namespace ShopAPI.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("{id}")] 
+        public async Task<IActionResult> ExcluirProduto([FromRoute] string id)
+        {
+           
+            var command = new DeleteProductCommand(id);
+
+            var resultado = await _mediator.Send(command);
+
+    
+            if (!resultado)
+            {
+             
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }
