@@ -1,0 +1,42 @@
+2025-11-08 19:00:56.055 -03:00 [INF] Iniciando a Shop API...
+2025-11-08 19:00:56.971 -03:00 [INF] User profile is available. Using 'C:\Users\helo_\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 19:00:57.063 -03:00 [INF] Now listening on: http://localhost:5000
+2025-11-08 19:00:57.217 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 19:00:57.219 -03:00 [INF] Hosting environment: Development
+2025-11-08 19:00:57.221 -03:00 [INF] Content root path: C:\Projetos\desafio-1\backend\ShopAPI
+2025-11-08 19:01:08.816 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-11-08 19:01:08.939 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-08 19:01:08.984 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 173.8701ms
+2025-11-08 19:01:09.007 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2025-11-08 19:01:16.068 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 19:01:16.138 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 70.1112ms
+2025-11-08 19:01:16.148 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 19:01:16.153 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 4.7865ms
+2025-11-08 19:01:16.217 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 19:01:16.242 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.3754ms
+2025-11-08 19:01:16.339 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 19:01:16.353 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.0924ms
+2025-11-08 19:01:27.444 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/doc?swaggerVersion=v1 - null null
+2025-11-08 19:01:27.456 -03:00 [INF] Executing endpoint 'SwaggerDoc.SwaggerController.Doc (SwaggerDoc)'
+2025-11-08 19:01:27.479 -03:00 [INF] Route matched with {action = "Doc", controller = "Swagger"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Doc(SwaggerDoc.ISwaggerDocGenerator, System.String) on controller SwaggerDoc.SwaggerController (SwaggerDoc).
+2025-11-08 19:01:27.497 -03:00 [INF] Executed action SwaggerDoc.SwaggerController.Doc (SwaggerDoc) in 11.6614ms
+2025-11-08 19:01:27.500 -03:00 [INF] Executed endpoint 'SwaggerDoc.SwaggerController.Doc (SwaggerDoc)'
+2025-11-08 19:01:27.503 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'SwaggerDoc.ISwaggerDocGenerator' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ShopAPI.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in C:\Projetos\desafio-1\backend\ShopAPI\Middlewares\ExceptionHandlingMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-08 19:01:27.538 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/doc?swaggerVersion=v1 - 500 null text/plain; charset=utf-8 93.7093ms

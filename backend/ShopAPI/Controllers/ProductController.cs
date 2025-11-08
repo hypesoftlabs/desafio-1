@@ -6,11 +6,13 @@ using ShopAPI.Application.Common;
 using ShopAPI.Application.DTOs;
 using ShopAPI.Application.Queries;
 using ShopAPI.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ShopAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
 
@@ -22,6 +24,7 @@ namespace ShopAPI.Controllers
 
 
         [HttpPatch("{id}/storage")]
+        [Authorize(Roles = "admin, manager")]
         public async Task<IActionResult> UpdateStorage(
         [FromRoute] string id,
         [FromBody] UpdateStorageCommand command)
@@ -65,6 +68,7 @@ namespace ShopAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin, manager")]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
         {
 
@@ -75,6 +79,7 @@ namespace ShopAPI.Controllers
 
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "admin, manager")]
         public async Task<IActionResult> EditProduct(
             [FromRoute] string id,
             [FromBody] EditProductCommand command)
@@ -95,7 +100,8 @@ namespace ShopAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")] 
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteProduct([FromRoute] string id)
         {
            

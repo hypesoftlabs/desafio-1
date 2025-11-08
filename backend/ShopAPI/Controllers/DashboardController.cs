@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShopAPI.Application.DTOs;
 using ShopAPI.Application.Queries;
@@ -7,6 +8,7 @@ namespace ShopAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "admin, manager")]
     public class DashboardController : ControllerBase
     {
         private readonly IMediator _mediator;

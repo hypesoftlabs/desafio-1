@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopAPI.Application.Commands;
@@ -10,6 +11,7 @@ namespace ShopAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -29,6 +31,7 @@ namespace ShopAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin, manager")]
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryCommand command)
         {
             var newCategoryId = await _mediator.Send(command);
@@ -38,7 +41,8 @@ namespace ShopAPI.Controllers
         }
 
        
-        [HttpPut("{id}")] 
+        [HttpPut("{id}")]
+        [Authorize(Roles = "admin, manager")]
         public async Task<IActionResult> EditCategory(
             [FromRoute] string id, 
             [FromBody] EditCategoryCommand command) 
@@ -62,8 +66,9 @@ namespace ShopAPI.Controllers
         }
 
       
-        [HttpDelete("{id}")] 
-        public async Task<IActionResult> ExcluirCategoria([FromRoute] string id)
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> DeleteCategoria([FromRoute] string id)
         {
           
             var command = new DeleteCategoryCommand(id);
