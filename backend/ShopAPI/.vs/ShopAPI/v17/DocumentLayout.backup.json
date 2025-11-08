@@ -3,28 +3,15 @@
   "WorkspaceRootPath": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\validators\\createproductcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\getallcategoriesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\queries\\getallproductsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,97 +21,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T13:48:15.065Z",
+              "WhenOpened": "2025-11-08T14:24:24.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateProductCommandValidator.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Validators\\CreateProductCommandValidator.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Validators\\CreateProductCommandValidator.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Validators\\CreateProductCommandValidator.cs",
-              "RelativeToolTip": "..\\ShopAPI.Application\\Validators\\CreateProductCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Middlewares\\ExceptionHandlingMiddleware.cs*",
+              "RelativeToolTip": "Middlewares\\ExceptionHandlingMiddleware.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T13:46:09.147Z",
+              "WhenOpened": "2025-11-08T14:21:42.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T13:37:39.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetAllProductsQuery.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
-              "RelativeToolTip": "..\\ShopAPI.Application\\Queries\\GetAllProductsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T13:34:31.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoryDTO.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\DTOs\\CategoryDTO.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\DTOs\\CategoryDTO.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\DTOs\\CategoryDTO.cs",
-              "RelativeToolTip": "..\\ShopAPI.Application\\DTOs\\CategoryDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T13:33:14.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetAllCategoriesQueryHandler.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllCategoriesQueryHandler.cs",
-              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\GetAllCategoriesQueryHandler.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetAllCategoriesQueryHandler.cs",
-              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\GetAllCategoriesQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T13:32:43.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T02:13:24.985Z",
+              "WhenOpened": "2025-11-08T13:58:59.39Z",
               "EditorCaption": ""
             }
           ]

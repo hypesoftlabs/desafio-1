@@ -78,3 +78,4 @@ C:\Projetos\desafio-1\backend\ShopAPI\obj\Debug\net9.0\refint\ShopAPI.dll
 C:\Projetos\desafio-1\backend\ShopAPI\obj\Debug\net9.0\ShopAPI.pdb
 C:\Projetos\desafio-1\backend\ShopAPI\obj\Debug\net9.0\ShopAPI.genruntimeconfig.cache
 C:\Projetos\desafio-1\backend\ShopAPI\obj\Debug\net9.0\ref\ShopAPI.dll
+C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

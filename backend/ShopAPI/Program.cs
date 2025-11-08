@@ -5,6 +5,8 @@ using ShopAPI.Domain.Repositories;
 using ShopAPI.Infrastructure.Data;
 using ShopAPI.Infrastructure.Repositories;
 using FluentValidation;
+using MediatR;
+using ShopAPI.Middlewares;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +26,7 @@ builder.Services.AddAutoMapper(cfg =>
     cfg.AddProfile<ShopAPI.Application.Mappings.MappingProfile>();
 });
 builder.Services.AddValidatorsFromAssembly(typeof(IAssemblyMarker).Assembly);
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ShopAPI.Application.Behaviors.ValidationBehavior<,>));
 
 
 builder.Services.AddControllers();
@@ -32,6 +35,7 @@ builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 
 if (app.Environment.IsDevelopment())
