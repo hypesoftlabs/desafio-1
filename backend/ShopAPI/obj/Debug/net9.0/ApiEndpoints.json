@@ -72,6 +72,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ShopAPI.Controllers.ProductController",
+    "Method": "EditarProduto",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "ShopAPI.Application.Commands.EditProductCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SwaggerDoc.SwaggerController",
     "Method": "Doc",
     "RelativePath": "doc",

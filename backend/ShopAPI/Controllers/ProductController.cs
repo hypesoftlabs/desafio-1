@@ -12,7 +12,7 @@ namespace ShopAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-       
+
         private readonly IMediator _mediator;
         public ProductController(IMediator mediator)
         {
@@ -23,7 +23,7 @@ namespace ShopAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts()
         {
-           
+
             var query = new GetAllProductsQuery();
 
             var products = await _mediator.Send(query);
@@ -34,10 +34,32 @@ namespace ShopAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CriarProduto([FromBody] CreateProductCommand command)
         {
-            
+
             var newProductId = await _mediator.Send(command);
 
             return CreatedAtAction(nameof(GetAllProducts), new { id = newProductId }, command);
+        }
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> EditarProduto(
+            [FromRoute] string id,
+            [FromBody] EditProductCommand command)
+        {
+
+            command.Id = id;
+
+
+            var resultado = await _mediator.Send(command);
+
+
+            if (!resultado)
+            {
+
+                return NotFound();
+            }
+
+            return NoContent();
         }
     }
 }
