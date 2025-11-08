@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using ShopAPI.Application.Common;
 using ShopAPI.Application.DTOs;
 using ShopAPI.Domain.Entities;
 using System;
@@ -9,7 +10,10 @@ using System.Threading.Tasks;
 
 namespace ShopAPI.Application.Queries
 {
-    public class GetAllProductsQuery : IRequest<IEnumerable<ProductDTO>>
+    public class GetAllProductsQuery : IRequest<Pagination<ProductDTO>>
     {
+        public string? Name { get; set; }
+        public int PageNumber { get; set; } = 1; 
+        public int PageSize { get; set; } = 10; 
     }
 }

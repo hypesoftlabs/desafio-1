@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopAPI.Application.Commands;
+using ShopAPI.Application.Common;
 using ShopAPI.Application.DTOs;
 using ShopAPI.Application.Queries;
 using ShopAPI.Domain.Entities;
@@ -21,18 +22,27 @@ namespace ShopAPI.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts()
+        public async Task<ActionResult<Pagination<ProductDTO>>> GetAllProducts(
+            [FromQuery] string? name,
+            [FromQuery] int pageNumber = 1, 
+            [FromQuery] int pageSize = 10  
+            )
         {
 
-            var query = new GetAllProductsQuery();
+            var query = new GetAllProductsQuery
+            {
+                Name = name,
+                PageNumber = pageNumber,
+                PageSize = pageSize
+            };
 
-            var products = await _mediator.Send(query);
+            var result = await _mediator.Send(query);
 
-            return Ok(products);
+            return Ok(result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CriarProduto([FromBody] CreateProductCommand command)
+        public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
         {
 
             var newProductId = await _mediator.Send(command);
@@ -42,7 +52,7 @@ namespace ShopAPI.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditarProduto(
+        public async Task<IActionResult> EditProduct(
             [FromRoute] string id,
             [FromBody] EditProductCommand command)
         {
@@ -50,10 +60,10 @@ namespace ShopAPI.Controllers
             command.Id = id;
 
 
-            var resultado = await _mediator.Send(command);
+            var result = await _mediator.Send(command);
 
 
-            if (!resultado)
+            if (!result)
             {
 
                 return NotFound();
@@ -63,15 +73,15 @@ namespace ShopAPI.Controllers
         }
 
         [HttpDelete("{id}")] 
-        public async Task<IActionResult> ExcluirProduto([FromRoute] string id)
+        public async Task<IActionResult> DeleteProduct([FromRoute] string id)
         {
            
             var command = new DeleteProductCommand(id);
 
-            var resultado = await _mediator.Send(command);
+            var result = await _mediator.Send(command);
 
     
-            if (!resultado)
+            if (!result)
             {
              
                 return NotFound();

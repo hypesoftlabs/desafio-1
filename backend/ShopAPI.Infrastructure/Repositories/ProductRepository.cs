@@ -1,5 +1,6 @@
 ﻿
-using Microsoft.EntityFrameworkCore; 
+using Microsoft.EntityFrameworkCore;
+using ShopAPI.Application.Common;
 using ShopAPI.Domain.Entities;
 using ShopAPI.Domain.Repositories;
 using ShopAPI.Infrastructure.Data; 
@@ -26,9 +27,24 @@ namespace ShopAPI.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetAllAsync()
+        public async Task<Pagination<Product>> GetAllAsync(string? name, int pageNumber, int pageSize)
         {
-            return await _context.Products.ToListAsync();
+            var query = _context.Products.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+            
+                query = query.Where(p => p.Name.ToLower().Contains(name.ToLower()));
+            }
+
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+            .Skip((pageNumber - 1) * pageSize) 
+            .Take(pageSize) 
+            .ToListAsync();
+
+            return new Pagination<Product>(items, totalCount, pageNumber, pageSize);
         }
 
         public async Task<Product?> GetByIdAsync(string id)

@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using MediatR;
+using ShopAPI.Application.Common;
 using ShopAPI.Application.DTOs;
 using ShopAPI.Application.Queries;
-using ShopAPI.Domain.Entities;
 using ShopAPI.Domain.Repositories;
 
 
 namespace ShopAPI.Application.Handlers
 {
-    public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, IEnumerable<ProductDTO>>
+    public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, Pagination<ProductDTO>>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
@@ -20,14 +20,21 @@ namespace ShopAPI.Application.Handlers
 
         }
 
-        public async Task<IEnumerable<ProductDTO>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
+        public async Task<Pagination<ProductDTO>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
             
-            var produtos = await _productRepository.GetAllAsync();
+            var products = await _productRepository.GetAllAsync(request.Name, request.PageNumber,request.PageSize);
 
-            var produtosDto = _mapper.Map<IEnumerable<ProductDTO>>(produtos);
+            var productsDTO = _mapper.Map<List<ProductDTO>>(products.Data);
 
-            return produtosDto;
+            var paginatedResult = new Pagination<ProductDTO>(
+                productsDTO,
+                products.TotalCount,
+                products.PageNumber, 
+                products.PageSize  
+            );
+
+            return paginatedResult;
         }
     }
 }

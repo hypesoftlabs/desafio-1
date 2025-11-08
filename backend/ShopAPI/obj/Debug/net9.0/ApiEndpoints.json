@@ -42,10 +42,26 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ShopAPI.Application.DTOs.ProductDTO, ShopAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "ShopAPI.Application.Common.Pagination\u00601[[ShopAPI.Application.DTOs.ProductDTO, ShopAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -57,7 +73,7 @@
   },
   {
     "ContainingType": "ShopAPI.Controllers.ProductController",
-    "Method": "CriarProduto",
+    "Method": "CreateProduct",
     "RelativePath": "api/Product",
     "HttpMethod": "POST",
     "IsController": true,
@@ -73,7 +89,7 @@
   },
   {
     "ContainingType": "ShopAPI.Controllers.ProductController",
-    "Method": "EditarProduto",
+    "Method": "EditProduct",
     "RelativePath": "api/Product/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -94,7 +110,7 @@
   },
   {
     "ContainingType": "ShopAPI.Controllers.ProductController",
-    "Method": "ExcluirProduto",
+    "Method": "DeleteProduct",
     "RelativePath": "api/Product/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
