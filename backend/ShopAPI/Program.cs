@@ -10,6 +10,8 @@ using ShopAPI.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using MongoDB.Driver;
+using Microsoft.Extensions.DependencyInjection;
 
 
 Log.Logger = new LoggerConfiguration()
@@ -32,8 +34,16 @@ try
     });
 
     var connectionString = builder.Configuration.GetConnectionString("MongoDb");
+
+    builder.Services.AddSingleton<IMongoClient>(new MongoClient(connectionString));
+
+ 
     builder.Services.AddDbContext<ShopDbContext>(
-        options => options.UseMongoDB(connectionString, "shopDatabase")
+        (sp, options) => 
+        {
+            var client = sp.GetRequiredService<IMongoClient>(); 
+            options.UseMongoDB(client, "shopDatabase");
+        }
     );
 
 
@@ -117,6 +127,18 @@ try
 
     builder.Services.AddAuthorization();
 
+    builder.Services.AddHealthChecks()
+         .AddMongoDb(
+             sp => sp.GetRequiredService<IMongoClient>(),
+             name: "mongodb",
+             timeout: TimeSpan.FromSeconds(5)
+         );
+    builder.Services.AddStackExchangeRedisCache(options =>
+    {
+        options.Configuration = "localhost:6379";
+        options.InstanceName = "ShopAPI_"; 
+    });
+
 
     var app = builder.Build();
     app.UseMiddleware<ExceptionHandlingMiddleware>();
@@ -143,6 +165,7 @@ try
     app.UseHttpsRedirection();
     app.UseAuthentication();
     app.UseAuthorization();
+    app.MapHealthChecks("/health");
     app.MapControllers();
     app.Run();
 }

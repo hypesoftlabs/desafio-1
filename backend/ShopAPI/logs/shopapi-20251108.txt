@@ -40,3 +40,354 @@ System.InvalidOperationException: No service for type 'SwaggerDoc.ISwaggerDocGen
    at ShopAPI.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in C:\Projetos\desafio-1\backend\ShopAPI\Middlewares\ExceptionHandlingMiddleware.cs:line 23
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 2025-11-08 19:01:27.538 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/doc?swaggerVersion=v1 - 500 null text/plain; charset=utf-8 93.7093ms
+2025-11-08 19:31:45.687 -03:00 [INF] Iniciando a Shop API...
+2025-11-08 19:31:45.923 -03:00 [INF] User profile is available. Using 'C:\Users\helo_\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 19:31:45.982 -03:00 [INF] Now listening on: http://localhost:5000
+2025-11-08 19:31:46.083 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 19:31:46.084 -03:00 [INF] Hosting environment: Development
+2025-11-08 19:31:46.085 -03:00 [INF] Content root path: C:\Projetos\desafio-1\backend\ShopAPI
+2025-11-08 21:13:43.376 -03:00 [INF] Iniciando a Shop API...
+2025-11-08 21:13:43.706 -03:00 [INF] User profile is available. Using 'C:\Users\helo_\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 21:13:43.764 -03:00 [INF] Now listening on: http://localhost:5000
+2025-11-08 21:13:43.860 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 21:13:43.862 -03:00 [INF] Hosting environment: Development
+2025-11-08 21:13:43.863 -03:00 [INF] Content root path: C:\Projetos\desafio-1\backend\ShopAPI
+2025-11-08 21:13:48.626 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:13:48.801 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 175.6553ms
+2025-11-08 21:13:48.809 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:13:48.817 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:13:48.823 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 5.1635ms
+2025-11-08 21:13:50.100 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1291.4933ms
+2025-11-08 21:13:50.125 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:13:50.142 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.2841ms
+2025-11-08 21:14:01.448 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:14:01.456 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 8.3039ms
+2025-11-08 21:14:01.473 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:14:01.473 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:14:01.480 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 6.5783ms
+2025-11-08 21:14:01.484 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.3587ms
+2025-11-08 21:14:01.532 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:14:01.543 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.3534ms
+2025-11-08 21:14:18.999 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE0OjEwIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=90e29c64-32ff-49c7-aae7-f29cb1349b90.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - null null
+2025-11-08 21:14:19.015 -03:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2025-11-08 21:14:19.017 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE0OjEwIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=90e29c64-32ff-49c7-aae7-f29cb1349b90.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - 200 null text/html 17.7369ms
+2025-11-08 21:14:19.039 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:14:19.040 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:14:19.046 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.4611ms
+2025-11-08 21:14:19.046 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 6.2511ms
+2025-11-08 21:14:23.688 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:14:23.694 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 5.6489ms
+2025-11-08 21:14:23.709 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:14:23.709 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:14:23.712 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.0172ms
+2025-11-08 21:14:23.717 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.6848ms
+2025-11-08 21:14:23.765 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:14:23.772 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.2548ms
+2025-11-08 21:14:33.404 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Category - null null
+2025-11-08 21:14:33.411 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-08 21:14:33.439 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-08 21:14:33.443 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-08 21:14:33.444 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Category - 401 0 null 39.8234ms
+2025-11-08 21:14:45.092 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Product?pageNumber=1&pageSize=10 - null null
+2025-11-08 21:14:45.099 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-11-08 21:14:45.101 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-11-08 21:14:45.103 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Product?pageNumber=1&pageSize=10 - 401 0 null 10.9754ms
+2025-11-08 21:15:10.860 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:15:10.866 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 5.9722ms
+2025-11-08 21:15:10.887 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:15:10.888 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:15:10.893 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.7825ms
+2025-11-08 21:15:10.894 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 5.2602ms
+2025-11-08 21:15:11.050 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:15:11.057 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.6536ms
+2025-11-08 21:15:14.055 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE1OjEzIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=66f2321b-1947-4a9c-bb24-d9f4c77a8410.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - null null
+2025-11-08 21:15:14.061 -03:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2025-11-08 21:15:14.063 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE1OjEzIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=66f2321b-1947-4a9c-bb24-d9f4c77a8410.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - 200 null text/html 8.1637ms
+2025-11-08 21:15:14.081 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:15:14.081 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:15:14.092 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.8475ms
+2025-11-08 21:15:14.093 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 11.8663ms
+2025-11-08 21:15:21.314 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE1OjIxIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=7680e41c-ad44-4069-b1f3-44863a6595d7.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - null null
+2025-11-08 21:15:21.319 -03:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2025-11-08 21:15:21.322 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE1OjIxIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=7680e41c-ad44-4069-b1f3-44863a6595d7.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - 200 null text/html 7.6318ms
+2025-11-08 21:15:21.332 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:15:21.332 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:15:21.335 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.5364ms
+2025-11-08 21:15:21.341 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.5197ms
+2025-11-08 21:15:25.948 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:15:25.953 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 5.206ms
+2025-11-08 21:15:25.965 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:15:25.965 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:15:25.971 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.0975ms
+2025-11-08 21:15:25.972 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 6.8541ms
+2025-11-08 21:15:26.023 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:15:26.030 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.6581ms
+2025-11-08 21:16:33.665 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger - null null
+2025-11-08 21:16:33.672 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger - 301 0 null 6.8084ms
+2025-11-08 21:16:33.676 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:16:33.682 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 5.739ms
+2025-11-08 21:16:33.699 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - null null
+2025-11-08 21:16:33.700 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - null null
+2025-11-08 21:16:33.700 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-08 21:16:33.701 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:16:33.701 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:16:33.707 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-11-08 21:16:33.710 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-11-08 21:16:33.718 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.8052ms
+2025-11-08 21:16:33.712 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 11.5138ms
+2025-11-08 21:16:33.718 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - 200 152034 text/css 18.6449ms
+2025-11-08 21:16:33.710 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-11-08 21:16:33.718 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 17.8084ms
+2025-11-08 21:16:33.731 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 31.2142ms
+2025-11-08 21:16:33.834 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:16:33.842 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.2358ms
+2025-11-08 21:16:33.846 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - null null
+2025-11-08 21:16:33.849 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-11-08 21:16:33.852 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 5.8725ms
+2025-11-08 21:16:44.407 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE2OjM3IEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=1f04e460-e618-42bd-a669-990dd2ee7abc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=7850e6cf-12ac-4f88-bbb9-723f309b9677.1f04e460-e618-42bd-a669-990dd2ee7abc.06a28015-07df-413e-b123-df2e16e444f2 - null null
+2025-11-08 21:16:44.413 -03:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2025-11-08 21:16:44.414 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE2OjM3IEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=1f04e460-e618-42bd-a669-990dd2ee7abc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=7850e6cf-12ac-4f88-bbb9-723f309b9677.1f04e460-e618-42bd-a669-990dd2ee7abc.06a28015-07df-413e-b123-df2e16e444f2 - 200 null text/html 7.2637ms
+2025-11-08 21:16:44.434 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:16:44.434 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:16:44.439 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.8531ms
+2025-11-08 21:16:44.440 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 5.914ms
+2025-11-08 21:16:50.237 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Category - null null
+2025-11-08 21:16:50.377 -03:00 [INF] Executing endpoint 'ShopAPI.Controllers.CategoryController.GetAllCategories (ShopAPI)'
+2025-11-08 21:16:50.394 -03:00 [INF] Route matched with {action = "GetAllCategories", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ShopAPI.Application.DTOs.CategoryDTO]]] GetAllCategories() on controller ShopAPI.Controllers.CategoryController (ShopAPI).
+2025-11-08 21:16:50.400 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-08 21:16:50.535 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-08 21:16:50.700 -03:00 [INF] Executed action ShopAPI.Controllers.CategoryController.GetAllCategories (ShopAPI) in 301.5018ms
+2025-11-08 21:16:50.703 -03:00 [INF] Executed endpoint 'ShopAPI.Controllers.CategoryController.GetAllCategories (ShopAPI)'
+2025-11-08 21:16:50.705 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No suitable constructor was found for entity type 'Product'. The following constructors had parameters that could not be bound to properties of the entity type: 
+    Cannot bind 'preco' in 'Product(string name, string description, double preco, string categoryId, int quantity)'
+Note that only mapped properties can be bound to constructor parameters. Navigations to related entities, including references to owned types, cannot be bound.
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.ConstructorBindingFactory.GetBindings[T](T type, Func`5 bindToProperty, Func`5 bind, InstantiationBinding& constructorBinding, InstantiationBinding& serviceOnlyBinding)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.ConstructorBindingFactory.GetBindings(IMutableEntityType entityType, InstantiationBinding& constructorBinding, InstantiationBinding& serviceOnlyBinding)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.ConstructorBindingConvention.ProcessModelFinalizing(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalizing(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalizing(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at MongoDB.EntityFrameworkCore.Infrastructure.MongoModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Collections.Generic.IAsyncEnumerable<TEntity>.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ShopAPI.Infrastructure.Repositories.CategoryRepository.GetAllAsync() in C:\Projetos\desafio-1\backend\ShopAPI.Infrastructure\Repositories\CategoryRepository.cs:line 27
+   at ShopAPI.Application.Handlers.GetAllCategoriesHandler.Handle(GetAllCategoriesQuery request, CancellationToken cancellationToken) in C:\Projetos\desafio-1\backend\ShopAPI.Application\Handlers\GetAllCategoriesHandler.cs:line 29
+   at ShopAPI.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Projetos\desafio-1\backend\ShopAPI.Application\Behaviors\ValidationBehavior.cs:line 29
+   at ShopAPI.Controllers.CategoryController.GetAllCategories() in C:\Projetos\desafio-1\backend\ShopAPI\Controllers\CategoryController.cs:line 29
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ShopAPI.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in C:\Projetos\desafio-1\backend\ShopAPI\Middlewares\ExceptionHandlingMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-08 21:16:50.776 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Category - 500 null text/plain; charset=utf-8 539.6476ms
+2025-11-08 21:17:34.061 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Product?pageNumber=1&pageSize=10 - null null
+2025-11-08 21:17:34.067 -03:00 [INF] Executing endpoint 'ShopAPI.Controllers.ProductController.GetAllProducts (ShopAPI)'
+2025-11-08 21:17:34.081 -03:00 [INF] Route matched with {action = "GetAllProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ShopAPI.Application.Common.Pagination`1[ShopAPI.Application.DTOs.ProductDTO]]] GetAllProducts(System.String, System.String, Int32, Int32) on controller ShopAPI.Controllers.ProductController (ShopAPI).
+2025-11-08 21:17:34.147 -03:00 [INF] Executed action ShopAPI.Controllers.ProductController.GetAllProducts (ShopAPI) in 63.1339ms
+2025-11-08 21:17:34.149 -03:00 [INF] Executed endpoint 'ShopAPI.Controllers.ProductController.GetAllProducts (ShopAPI)'
+2025-11-08 21:17:34.151 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No suitable constructor was found for entity type 'Product'. The following constructors had parameters that could not be bound to properties of the entity type: 
+    Cannot bind 'preco' in 'Product(string name, string description, double preco, string categoryId, int quantity)'
+Note that only mapped properties can be bound to constructor parameters. Navigations to related entities, including references to owned types, cannot be bound.
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.ConstructorBindingFactory.GetBindings[T](T type, Func`5 bindToProperty, Func`5 bind, InstantiationBinding& constructorBinding, InstantiationBinding& serviceOnlyBinding)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.ConstructorBindingFactory.GetBindings(IMutableEntityType entityType, InstantiationBinding& constructorBinding, InstantiationBinding& serviceOnlyBinding)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.ConstructorBindingConvention.ProcessModelFinalizing(IConventionModelBuilder modelBuilder, IConventionContext`1 context)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelFinalizing(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelFinalizing(IConventionModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.Model.FinalizeModel()
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at MongoDB.EntityFrameworkCore.Infrastructure.MongoModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ShopAPI.Infrastructure.Repositories.ProductRepository.GetAllAsync(String name, String categoryId, Int32 pageNumber, Int32 pageSize) in C:\Projetos\desafio-1\backend\ShopAPI.Infrastructure\Repositories\ProductRepository.cs:line 45
+   at ShopAPI.Application.Handlers.GetAllProductsHandler.Handle(GetAllProductsQuery request, CancellationToken cancellationToken) in C:\Projetos\desafio-1\backend\ShopAPI.Application\Handlers\GetAllProductsHandler.cs:line 26
+   at ShopAPI.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Projetos\desafio-1\backend\ShopAPI.Application\Behaviors\ValidationBehavior.cs:line 29
+   at ShopAPI.Controllers.ProductController.GetAllProducts(String name, String categoryId, Int32 pageNumber, Int32 pageSize) in C:\Projetos\desafio-1\backend\ShopAPI\Controllers\ProductController.cs:line 65
+   at lambda_method15(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ShopAPI.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext httpContext) in C:\Projetos\desafio-1\backend\ShopAPI\Middlewares\ExceptionHandlingMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-08 21:17:34.173 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Product?pageNumber=1&pageSize=10 - 500 null text/plain; charset=utf-8 111.377ms
+2025-11-08 21:18:32.087 -03:00 [INF] Iniciando a Shop API...
+2025-11-08 21:18:32.410 -03:00 [INF] User profile is available. Using 'C:\Users\helo_\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-08 21:18:32.468 -03:00 [INF] Now listening on: http://localhost:5000
+2025-11-08 21:18:32.563 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-08 21:18:32.564 -03:00 [INF] Hosting environment: Development
+2025-11-08 21:18:32.564 -03:00 [INF] Content root path: C:\Projetos\desafio-1\backend\ShopAPI
+2025-11-08 21:18:37.463 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:18:37.612 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 150.6574ms
+2025-11-08 21:18:37.621 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:18:37.630 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:18:37.634 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.943ms
+2025-11-08 21:18:37.654 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.7631ms
+2025-11-08 21:18:37.687 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:18:37.703 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.4316ms
+2025-11-08 21:18:40.558 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE4OjQwIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=e9119dd6-9d7c-4625-bcb9-420f6d96912b.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - null null
+2025-11-08 21:18:40.575 -03:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2025-11-08 21:18:40.576 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE4OjQwIEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=19d7020c-a7fa-49dd-986d-d85f095865bc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=e9119dd6-9d7c-4625-bcb9-420f6d96912b.19d7020c-a7fa-49dd-986d-d85f095865bc.06a28015-07df-413e-b123-df2e16e444f2 - 200 null text/html 18.2969ms
+2025-11-08 21:18:40.597 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:18:40.597 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:18:40.600 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.1273ms
+2025-11-08 21:18:40.612 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.1839ms
+2025-11-08 21:18:46.902 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-11-08 21:18:46.907 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 4.9215ms
+2025-11-08 21:18:46.920 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:18:46.921 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:18:46.925 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 4.1668ms
+2025-11-08 21:18:46.930 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.7573ms
+2025-11-08 21:18:47.048 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2025-11-08 21:18:47.059 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.3053ms
+2025-11-08 21:18:48.871 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE4OjQ4IEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=1f04e460-e618-42bd-a669-990dd2ee7abc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=620d47ae-dcad-43c3-bccc-8775b9d4d699.1f04e460-e618-42bd-a669-990dd2ee7abc.06a28015-07df-413e-b123-df2e16e444f2 - null null
+2025-11-08 21:18:48.876 -03:00 [INF] Sending file. Request path: '/oauth2-redirect.html'. Physical path: 'N/A'
+2025-11-08 21:18:48.878 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/oauth2-redirect.html?state=U2F0IE5vdiAwOCAyMDI1IDIxOjE4OjQ4IEdNVC0wMzAwIChIb3LDoXJpbyBQYWRyw6NvIGRlIEJyYXPDrWxpYSk%3D&session_state=1f04e460-e618-42bd-a669-990dd2ee7abc&iss=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fshop-realm&code=620d47ae-dcad-43c3-bccc-8775b9d4d699.1f04e460-e618-42bd-a669-990dd2ee7abc.06a28015-07df-413e-b123-df2e16e444f2 - 200 null text/html 6.9871ms
+2025-11-08 21:18:48.887 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - null null
+2025-11-08 21:18:48.887 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-08 21:18:48.892 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 4.757ms
+2025-11-08 21:18:48.892 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.5995ms
+2025-11-08 21:18:54.236 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Category - null null
+2025-11-08 21:18:54.244 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-11-08 21:18:54.394 -03:00 [INF] Executing endpoint 'ShopAPI.Controllers.CategoryController.GetAllCategories (ShopAPI)'
+2025-11-08 21:18:54.412 -03:00 [INF] Route matched with {action = "GetAllCategories", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ShopAPI.Application.DTOs.CategoryDTO]]] GetAllCategories() on controller ShopAPI.Controllers.CategoryController (ShopAPI).
+2025-11-08 21:18:54.417 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-08 21:18:54.561 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-08 21:18:55.071 -03:00 [INF] Executed MQL query
+shopDatabase.categories.aggregate([?])
+2025-11-08 21:18:55.125 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ShopAPI.Application.DTOs.CategoryDTO, ShopAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-08 21:18:55.134 -03:00 [INF] Executed action ShopAPI.Controllers.CategoryController.GetAllCategories (ShopAPI) in 717.7362ms
+2025-11-08 21:18:55.135 -03:00 [INF] Executed endpoint 'ShopAPI.Controllers.CategoryController.GetAllCategories (ShopAPI)'
+2025-11-08 21:18:55.139 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Category - 200 null application/json; charset=utf-8 902.7567ms
+2025-11-08 21:22:57.985 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/health - null null
+2025-11-08 21:22:57.994 -03:00 [INF] Executing endpoint 'Health checks'
+2025-11-08 21:22:58.055 -03:00 [INF] Executed endpoint 'Health checks'
+2025-11-08 21:22:58.057 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/health - 200 null text/plain 71.4727ms
+2025-11-08 21:22:58.234 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - null null
+2025-11-08 21:22:58.240 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 404 0 null 6.401ms
+2025-11-08 21:22:58.244 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/favicon.ico, Response status code: 404

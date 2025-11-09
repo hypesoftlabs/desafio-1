@@ -3,44 +3,66 @@ using MediatR;
 using ShopAPI.Application.DTOs;
 using ShopAPI.Application.Queries;
 using ShopAPI.Domain.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
+
 
 namespace ShopAPI.Application.Handlers
 {
     public class GetDashboardSummaryHandler : IRequestHandler<GetDashboardSummaryQuery, DashboardSummaryDTO>
     {
         private readonly IProductRepository _productRepository;
+        private readonly IDistributedCache _cache;
         private readonly IMapper _mapper;
 
         private const int STOCK_LIMIT = 10;
 
-        public GetDashboardSummaryHandler(IProductRepository produtoRepository, IMapper mapper)
+        public GetDashboardSummaryHandler(
+            IProductRepository produtoRepository,
+            IMapper mapper,
+            IDistributedCache cache)
         {
             _productRepository = produtoRepository;
             _mapper = mapper;
+            _cache = cache;
         }
 
-      
         public async Task<DashboardSummaryDTO> Handle(GetDashboardSummaryQuery request, CancellationToken cancellationToken)
         {
-           
-            var totalProducts = await _productRepository.GetTotalCountAsync();
-            var valueStorage = await _productRepository.GetStorageTotalValueAsync();
-            var lowStorageProducts = await _productRepository.GetLowStorageItemsAsync(STOCK_LIMIT);
+            const string cacheKey = "dashboard_summary";
+            DashboardSummaryDTO summary;
 
-            var productsDTO = _mapper.Map<List<ProductDTO>>(lowStorageProducts);
+            var cachedSummary = await _cache.GetStringAsync(cacheKey, cancellationToken);
 
-
-            return new DashboardSummaryDTO
+            if (!string.IsNullOrEmpty(cachedSummary))
             {
-                TotalProducts = totalProducts,
-                StorageValueTotal = valueStorage,
-                LowStorageProducts = productsDTO
-            };
+                summary = JsonSerializer.Deserialize<DashboardSummaryDTO>(cachedSummary);
+            }
+            else
+            {
+                var totalProducts = await _productRepository.GetTotalCountAsync();
+                var valueStorage = await _productRepository.GetStorageTotalValueAsync();
+                var lowStorageProducts = await _productRepository.GetLowStorageItemsAsync(STOCK_LIMIT);
+
+                var productsDTO = _mapper.Map<List<ProductDTO>>(lowStorageProducts);
+
+                summary = new DashboardSummaryDTO
+                {
+                    TotalProducts = totalProducts,
+                    StorageValueTotal = valueStorage,
+                    LowStorageProducts = productsDTO
+                };
+
+                var summaryJson = JsonSerializer.Serialize(summary);
+                var cacheOptions = new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
+                };
+
+                await _cache.SetStringAsync(cacheKey, summaryJson, cacheOptions, cancellationToken);
+            }
+
+            return summary;
         }
     }
 }

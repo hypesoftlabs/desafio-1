@@ -83,3 +83,7 @@ C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Auth
 C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\HealthChecks.MongoDb.dll
+C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\Pipelines.Sockets.Unofficial.dll
+C:\Projetos\desafio-1\backend\ShopAPI\bin\Debug\net9.0\StackExchange.Redis.dll

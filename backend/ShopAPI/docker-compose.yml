@@ -34,6 +34,11 @@ services:
         command: start-dev 
         depends_on:
           - mongo
+  redis:
+        image: redis:7-alpine 
+        container_name: shop-redis
+        ports:
+          - "6379:6379" 
 
 volumes:
   mongo-data: 

@@ -65,6 +65,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[13.1.0, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[9.0.10, )"
             }
           },
           "imports": [
