@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # --- API .NET ---
+  shop-api:
+    container_name: shop-api-container
+    build:
+      context: .
+      dockerfile: ShopAPI/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - mongo
+    networks:
+      - shop-network
+
+  # --- BANCO DE DADOS ---
+  mongo:
+    image: mongo
+    container_name: shop-mongo-db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - shop-network
+
+  # --- ADMIN DO MONGO ---
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express-admin
+    ports:
+      - "8081:8081" 
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongo
+    depends_on:
+      - mongo
+    networks:
+      - shop-network
+
+  # --- KEYCLOAK ---
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0
+    container_name: shop-keycloak
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_HOSTNAME=localhost
+      - KC_HTTP_RELATIVE_PATH=/auth
+      - KC_HTTP_ENABLED=true
+    command: start-dev --import-realm
+    ports:
+      - "8080:8080" 
+    volumes:
+      - ./keycloak-import:/opt/keycloak/data/import
+      - keycloak-data:/opt/keycloak/data
+    depends_on:
+      - mongo
+    networks:
+      - shop-network
+
+  # --- REDIS ---
+  redis:
+    image: redis:7-alpine
+    container_name: shop-redis
+    networks:
+      - shop-network
+
+  # --- NGINX ---
+  nginx:
+    container_name: shop-reverse-proxy
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - shop-api
+      - keycloak
+    networks:
+      - shop-network
+
+# --- VOLUMES GLOBAIS ---
+volumes:
+  mongo-data:
+  keycloak-data:
+
+# --- REDE GLOBAL ---
+networks:
+  shop-network:
+    driver: bridge

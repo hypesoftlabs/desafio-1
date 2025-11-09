@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using ShopAPI.Application;
 using ShopAPI.Domain.Repositories;
@@ -12,11 +11,11 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using MongoDB.Driver;
 using Microsoft.Extensions.DependencyInjection;
-
+using Microsoft.IdentityModel.Tokens;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
-    .WriteTo.File("logs/shopapi-.txt", rollingInterval: RollingInterval.Day) 
+    .WriteTo.File("logs/shopapi-.txt", rollingInterval: RollingInterval.Day)
     .CreateBootstrapLogger();
 
 Log.Information("Iniciando a Shop API...");
@@ -24,6 +23,10 @@ Log.Information("Iniciando a Shop API...");
 try
 {
     var builder = WebApplication.CreateBuilder(args);
+    var externalAuthority = builder.Configuration["Keycloak:AuthorityExternal"];
+    var internalAuthority = builder.Configuration["Keycloak:AuthorityInternal"];
+    var audience = builder.Configuration["Keycloak:Audience"];
+
 
     builder.Host.UseSerilog((context, configuration) =>
     {
@@ -37,15 +40,13 @@ try
 
     builder.Services.AddSingleton<IMongoClient>(new MongoClient(connectionString));
 
- 
     builder.Services.AddDbContext<ShopDbContext>(
-        (sp, options) => 
+        (sp, options) =>
         {
-            var client = sp.GetRequiredService<IMongoClient>(); 
+            var client = sp.GetRequiredService<IMongoClient>();
             options.UseMongoDB(client, "shopDatabase");
         }
     );
-
 
     builder.Services.AddScoped<IProductRepository, ProductRepository>();
     builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
@@ -62,69 +63,66 @@ try
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(options =>
     {
-
         options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
         {
             Type = SecuritySchemeType.OAuth2,
             Flows = new OpenApiOAuthFlows
             {
-
                 AuthorizationCode = new OpenApiOAuthFlow
                 {
-
-                    AuthorizationUrl = new Uri($"{builder.Configuration["Keycloak:Authority"]}/protocol/openid-connect/auth"),
-
-                    TokenUrl = new Uri($"{builder.Configuration["Keycloak:Authority"]}/protocol/openid-connect/token"),
+                    AuthorizationUrl = new Uri($"{externalAuthority}/protocol/openid-connect/auth"),
+                    TokenUrl = new Uri($"{externalAuthority}/protocol/openid-connect/token"),
                     Scopes = new Dictionary<string, string>
-                {
-                    { "openid", "OpenID" },
-                    { "profile", "Profile" }
-                }
+                    {
+                        { "openid", "OpenID" },
+                        { "profile", "Profile" }
+                    }
                 }
             }
         });
 
         options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
         {
-            new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference
+                new OpenApiSecurityScheme
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "oauth2"
-                }
-            },
-            new List<string>()
-        }
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "oauth2"
+                    }
+                },
+                new List<string>()
+            }
+        });
     });
-    });
+
+
+
     builder.Services.AddAuthentication(options =>
     {
-
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
     .AddJwtBearer(options =>
     {
-
-        options.Authority = builder.Configuration["Keycloak:Authority"];
-
-
-        options.Audience = builder.Configuration["Keycloak:Audience"];
+  
+        options.MetadataAddress = $"{internalAuthority}/.well-known/openid-configuration";
 
         options.RequireHttpsMetadata = false;
 
-
-        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateAudience = true,
             ValidateIssuer = true,
-            ValidateLifetime = true
+            ValidIssuer = externalAuthority,
+
+            ValidateAudience = true,
+            ValidAudience = audience,
+
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true
         };
-
     });
-
     builder.Services.AddAuthorization();
 
     builder.Services.AddHealthChecks()
@@ -133,31 +131,24 @@ try
              name: "mongodb",
              timeout: TimeSpan.FromSeconds(5)
          );
+
     builder.Services.AddStackExchangeRedisCache(options =>
     {
         options.Configuration = "localhost:6379";
-        options.InstanceName = "ShopAPI_"; 
+        options.InstanceName = "ShopAPI_";
     });
-
 
     var app = builder.Build();
     app.UseMiddleware<ExceptionHandlingMiddleware>();
-
 
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
         app.UseSwaggerUI(options =>
         {
-
             options.SwaggerEndpoint("/swagger/v1/swagger.json", "Shop API V1");
-
-
             options.OAuthClientId("shop-api");
-
-
             options.OAuthAppName("Shop API - Swagger UI");
-
             options.OAuthUsePkce();
         });
     }
@@ -177,7 +168,3 @@ finally
 {
     Log.CloseAndFlush();
 }
-
-
-
-
