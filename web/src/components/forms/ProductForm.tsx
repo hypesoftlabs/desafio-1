@@ -32,24 +32,31 @@ export function ProductForm({ onSuccess }: ProductFormProps) {
   const [categories, setCategories] = useState<Category[]>([]);
 
   const { register, handleSubmit, reset } = useForm<z.infer<typeof schema>>({
-  resolver: zodResolver(schema) as any, // força o resolver tipado corretamente
-});
+    resolver: zodResolver(schema) as any,
+  });
 
   useEffect(() => {
     getCategories().then((data: Category[]) => {
-      // força tipagem e ignora categorias com id indefinido
       setCategories(data.filter((c) => !!c.id));
     });
   }, []);
 
   const onSubmit = async (data: ProductFormData) => {
-    await createProduct({
-      ...data,
-      description: data.description ?? "", // garante string
-    });
-    reset();
-    onSuccess?.();
+  const payload = {
+    product: {
+      name: data.name,
+      description: data.description ?? "",
+      price: Number(data.price),
+      categoryId: data.categoryId,
+      stockQuantity: Number(data.stock),
+    },
   };
+
+  console.log("Payload final:", payload);
+  await createProduct(payload as any);
+  reset();
+  onSuccess?.();
+};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

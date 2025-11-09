@@ -6,6 +6,12 @@ export const getCategories = async (): Promise<Category[]> => {
   return data;
 };
 
-export const createCategory = async (category: Category) => {
-  await api.post("/category", category);
+export const createCategory = async (data: { name: string }) => {
+  try {
+    const response = await api.post("/category", { category: data });
+    return response.data;
+  } catch (error: any) {
+    console.error("Erro ao criar categoria:", error.response?.data || error);
+    throw error;
+  }
 };

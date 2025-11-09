@@ -3,7 +3,7 @@ import keycloak from "./keycloak";
 export const initKeycloak = (): Promise<string> => {
   return new Promise((resolve, reject) => {
     keycloak
-      .init({ onLoad: "login-required" }) // força login
+      .init({ onLoad: "login-required" }) 
       .then((authenticated) => {
         if (authenticated) {
           resolve(keycloak.token!);
