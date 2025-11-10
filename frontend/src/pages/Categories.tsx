@@ -7,6 +7,7 @@ import type { Category } from '../services/category.services'
 import { CategoryModal } from '../components/CategoryModal'
 import { useDeleteCategory } from '../hooks/categories/useDeleteCategories'
 import { ConfirmModal } from '../components/ConfrmModal'
+import { CircularLoader } from '../components/loading'
 
 export const Categories = () => {
   const { data, isLoading, error } = useCategories();
@@ -45,9 +46,11 @@ export const Categories = () => {
   }
 
 
-  if (isLoading) return <p>Carregando...</p>;
+  if (isLoading) return (
+    <div className='flex h-full items-center justify-center'>
+      <CircularLoader/>
+    </div>);
   if (error) return <p>{error.message}</p>;
-
 
     return(
         <>

@@ -1,17 +1,18 @@
+import { Product } from '@/services/product.services';
 import React from 'react';
 
 type ProductCardProps = {
-  name: string;
-  category: string;
-  price: number;
-  stock: number;
+  product: Product,
+  categoryName: string,
+  onEdit: (product : Product) => void,
+  onDelete: (product : Product) => void
 };
 
-export const ProductCard = ({ name, category, price, stock }: ProductCardProps) => {
+export const ProductCard = ({ product, categoryName, onEdit, onDelete}: ProductCardProps) => {
   return (
     <div className="bg-white flex flex-col gap-3.5 rounded-lg shadow-sm p-6 relative">
       <div className="absolute top-4 right-4 flex space-x-2">
-        <button className="text-gray-400 hover:text-emerald-600 p-1 rounded-full transition-colors duration-200 cursor-pointer">
+        <button onClick={() => onEdit(product)} className="text-gray-400 hover:text-emerald-600 p-1 rounded-full transition-colors duration-200 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -28,7 +29,7 @@ export const ProductCard = ({ name, category, price, stock }: ProductCardProps) 
           </svg>
         </button>
         
-        <button className="text-gray-400 hover:text-red-500 p-1 rounded-full transition-colors duration-200 cursor-pointer">
+        <button onClick={() => onDelete(product)} className="text-gray-400 hover:text-red-500 p-1 rounded-full transition-colors duration-200 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -46,18 +47,18 @@ export const ProductCard = ({ name, category, price, stock }: ProductCardProps) 
         </button>
       </div>
       <h3 className="text-xl font-semibold text-emerald-950">
-        {name}
+        {product.name}
       </h3>
       <span className="text-md font-medium text-emerald-600 bg-emerald-100 px-4 py-1 w-fit rounded-full">
-        {category}
+        {categoryName}
       </span>
       <div className="flex justify-between items-baseline">
   
         <span className="text-2xl font-bold text-gray-900">
-          R$ {price.toFixed(2)}
+          R$ {product.price.toFixed(2)}
         </span>
         <span className="text-sm text-gray-600">
-          {stock} em estoque
+          {product.quantity} em estoque
         </span>
       </div>
     </div>
