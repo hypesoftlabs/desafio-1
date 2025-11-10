@@ -1,27 +1,69 @@
-import { LogOut, Search } from 'lucide-react'
-import logo from '../assets/logo.png'
-import { Input } from './input'
+// src/components/Header.tsx
+import { LogOut, Bell } from "lucide-react";
+import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { useDashboardSummary } from "@/hooks/dashboard/useSummary";
 
 export const Header = () => {
-return(
-<header className='h-20 flex text-center items-center'>
-    <div className='flex items-center  w-64'>
-      <img src={logo} alt="logo" className='h-20' />
-      <h1 className='text-2xl font-bold'>Shop</h1>
-      <h1 className='text-2xl font-bold text-gray-600'>Manager</h1>
-    </div>
-    <Input icon={<Search/>} placeholder='Pesquisar Produto...'/>
-    <div className='flex items-center justify-self-end ml-auto p-2 gap-6'>
-      <span className='bg-emerald-500 rounded-full text-xl w-12 h-12 place-content-center text-center font-semibold text-white'>
-        NM
-      </span>
-      <div className='flex items-start flex-col'>
-        <h2 className='font-semibold'>Nome da Pessoa</h2>
-        <h2 className='text-gray-500'>Role</h2>
+  const { data: summary } = useDashboardSummary();
+  const lowStockCount = summary?.lowStorageProducts.length ?? 0;
+
+  const navigate = useNavigate();
+
+  function handleNotificationsClick() {
+    navigate("/estoque");
+  }
+
+  return (
+    <header className="flex h-20 items-center text-center">
+      <div className="flex w-64 items-center">
+        <img src={logo} alt="logo" className="h-20" />
+        <h1 className="text-2xl font-bold">Shop</h1>
+        <h1 className="text-2xl font-bold text-gray-600">Manager</h1>
       </div>
-      <LogOut className='text-red-600 cursor-pointer'/>
-  
-    </div>
-  </header>
-)
-}
+
+      <div className="ml-auto flex items-center gap-6 p-2">
+        {/* Botão de notificações com tooltip */}
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                type="button"
+                onClick={handleNotificationsClick}
+                className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-slate-700 hover:bg-gray-200"
+              >
+                <Bell className="h-5 w-5" />
+                {lowStockCount > 0 && (
+                  <span className="absolute -right-1 -top-1 flex min-h-[18px] min-w-[18px] items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-semibold text-white">
+                    {lowStockCount}
+                  </span>
+                )}
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-sm">
+                Ver itens com baixo estoque
+              </p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+
+        <span className="grid h-12 w-12 place-content-center rounded-full bg-emerald-500 text-xl font-semibold text-white">
+          NM
+        </span>
+        <div className="flex flex-col items-start">
+          <h2 className="text-base font-semibold">Nome da Pessoa</h2>
+          <h2 className="text-sm text-gray-500">Role</h2>
+        </div>
+        <LogOut className="cursor-pointer text-red-600" />
+      </div>
+    </header>
+  );
+};

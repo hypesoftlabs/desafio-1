@@ -125,7 +125,7 @@ export const Products = () => {
   return (
     <>
       <div className="flex h-15 justify-between gap-x-5 p-2">
-        <h2 className="text-2xl font-semibold text-gray-600">
+        <h2 className="text-3xl font-semibold text-gray-700">
           Produtos
         </h2>
 

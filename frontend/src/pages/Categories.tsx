@@ -55,7 +55,7 @@ export const Categories = () => {
     return(
         <>
         <div className='flex gap-x-5 h-15 justify-between p-2'>
-            <h2 className='text-2xl font-semibold text-gray-600'>Categorias</h2> 
+            <h2 className='text-3xl font-semibold text-gray-700'>Categorias</h2> 
             <Button icon={<Plus/>}  onClick={() => handleNew()}>
               Adicionar
             </Button>

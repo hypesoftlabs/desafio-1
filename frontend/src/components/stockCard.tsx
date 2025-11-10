@@ -1,58 +1,96 @@
-import { Minus, Plus } from 'lucide-react';
-import React, { useState } from 'react';
-import { Input } from './input';
+
+import { useState, useEffect } from "react";
+import { Save } from "lucide-react";
 
 type StockCardProps = {
   productName: string;
-  initialQuantity?: number; 
+  initialQuantity: number;
+  loading?: boolean;
+  onUpdate?: (newQuantity: number) => void;
 };
 
-export const StockCard = ({ productName, initialQuantity = 0 }: StockCardProps) => {
+export function StockCard({
+  productName,
+  initialQuantity,
+  loading = false,
+  onUpdate,
+}: StockCardProps) {
   const [quantity, setQuantity] = useState(initialQuantity);
 
-  const handleDecrease = () => {
-    setQuantity(prevQuantity => Math.max(0, prevQuantity - 1)); 
-  };
+  useEffect(() => {
+    setQuantity(initialQuantity);
+  }, [initialQuantity]);
 
-  const handleIncrease = () => {
-    setQuantity(prevQuantity => prevQuantity + 1);
-  };
+  function handleDecrease() {
+    setQuantity((prev) => Math.max(0, prev - 1));
+  }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value, 10);
-    setQuantity(value);
+  function handleIncrease() {
+    setQuantity((prev) => prev + 1);
+  }
 
-  };
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const value = e.target.value;
+    if (value === "") {
+      setQuantity(0);
+      return;
+    }
+    const num = Number(value);
+    if (!Number.isNaN(num) && num >= 0) {
+      setQuantity(num);
+    }
+  }
+
+  function handleSave() {
+    if (!onUpdate) return;
+    onUpdate(quantity);
+  }
 
   return (
-    <div className="bg-white shadow-sm rounded-lg p-6 max-w-sm mx-auto border border-gray-200">
-      <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+    <div className="flex flex-col gap-3 rounded-lg bg-white p-4 shadow">
+      <h3 className=" text-lg font-semibold text-slate-900">
         {productName}
       </h3>
 
-      <div className="flex items-center justify-center space-x-2">
+      <div className="flex items-center gap-3">
         <button
+          type="button"
           onClick={handleDecrease}
-          className="bg-red-500 hover:bg-red-600 cursor-pointer text-white font-bold py-2 px-4 rounded-full transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-          disabled={quantity === 0} 
+          disabled={loading || quantity <= 0}
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-lg font-semibold leading-none text-slate-700 hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          <Minus/>
+          -
         </button>
 
-        <Input 
+        <input
           type="number"
-          min="0"
+          min={0}
           value={quantity}
-          onChange={handleChange}/>
-          <button
-            onClick={handleIncrease}
-            className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-full transition-colors cursor-pointer duration-200"
-          >
-          <Plus/>
+          onChange={handleChange}
+          className="w-20 rounded-lg border border-slate-300 px-2 py-1 text-center text-sm text-slate-900"
+        />
+
+        <button
+          type="button"
+          onClick={handleIncrease}
+          disabled={loading}
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-lg font-semibold leading-none text-slate-700 hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          +
         </button>
       </div>
 
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={handleSave}
+          disabled={loading}
+          className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-1.5 text-md font-semibold leading-none text-white hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-70"
+        >
+          <Save className="h-4 w-4 -mt-px" />
+          {loading ? "Salvando..." : "Salvar"}
+        </button>
+      </div>
     </div>
   );
-};
-
+}

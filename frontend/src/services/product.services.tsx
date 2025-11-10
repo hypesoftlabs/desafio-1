@@ -80,8 +80,9 @@ export async function updateProductStock(
   input: UpdateProductStockInput
 ): Promise<Product> {
   const { data } = await api.patch<Product>(
-    `/api/product/${input.id}/stock`,
-    { quantity: input.quantity }
+    `/api/product/${input.id}/storage`,
+    { ProductId: input.id,
+      quantity: input.quantity }
   );
   return data;
 }
