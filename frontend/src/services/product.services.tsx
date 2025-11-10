@@ -37,21 +37,24 @@ export type UpdateProductStockInput = {
   id: string;
   quantity: number;
 };
-export interface GetProductsParams {
+export type GetProductsParams = {
   page: number;
   pageSize: number;
   name?: string;
   categoryId?: string;
-}
+};
 
 export async function getProducts(params: GetProductsParams) {
-  const { page, pageSize, name, categoryId} = params;
-
-  const { data } = await api.get("/product", {
-    params: { page, pageSize, name, categoryId},
+  const response = await api.get("/product", {
+    params: {
+      pageNumber: params.page,       
+      pageSize: params.pageSize,
+      name: params.name,
+      categoryId: params.categoryId,
+    },
   });
 
-  return data;
+  return response.data;
 }
 
 

@@ -33,7 +33,7 @@ import {
   SelectValue,
 } from "../components/select";
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 9;
 
 export const Products = () => {
   const [page, setPage] = useState(1);
@@ -71,9 +71,8 @@ export const Products = () => {
   }, [categories]);
 
   const products = data?.data ?? [];
-  const totalItems = data?.totalItems ?? 0;
-  const totalPages =
-    totalItems > 0 ? Math.ceil(totalItems / PAGE_SIZE) : 1;
+  const totalItems = data?.totalCount ?? 0;   // 👈 usando totalCount da API
+  const totalPages = data?.totalPages ?? 1;   // 👈 vindo da API também
 
   if (isLoading) {
     return (
@@ -137,9 +136,7 @@ export const Products = () => {
 
   return (
     <>
-      <h2 className="text-3xl font-semibold text-gray-700">
-        Produtos
-      </h2>
+      <h2 className="text-3xl font-semibold text-gray-700">Produtos</h2>
 
       <div className="mt-2 flex h-20 items-center justify-between gap-5">
         <div className="flex flex-1 items-center gap-3">
@@ -154,24 +151,22 @@ export const Products = () => {
             />
           </div>
 
-            <Select
-              value={selectedCategory}
-              onValueChange={(value) => setSelectedCategory(value)}
-            >
-              <SelectTrigger className="max-w-xs py-2 rounded-lg border border-gray-300 text-md">
-                <SelectValue placeholder="Filtrar por categoria" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Todas as categorias</SelectItem>
-                {categories.map((category) => (
-                  <SelectItem key={category.id} value={category.id}>
-                    {category.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-       
+          <Select
+            value={selectedCategory}
+            onValueChange={(value) => setSelectedCategory(value)}
+          >
+            <SelectTrigger className="max-w-xs rounded-lg border border-gray-300 py-2 text-md">
+              <SelectValue placeholder="Filtrar por categoria" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todas as categorias</SelectItem>
+              {categories.map((category) => (
+                <SelectItem key={category.id} value={category.id}>
+                  {category.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
         <Button icon={<Plus />} onClick={handleAdd}>
@@ -179,11 +174,9 @@ export const Products = () => {
         </Button>
       </div>
 
-      <div className="flex-1 rounded-lg bg-gray-100 p-3">
+      <div className="flex-1 flex flex-col place-items-stretch justify-between rounded-lg bg-gray-100 p-3">
         {isFetching && !isLoading && (
-          <div className="mb-2 text-xs text-gray-500">
-            Atualizando...
-          </div>
+          <div className="mb-2 text-xs text-gray-500">Atualizando...</div>
         )}
 
         {products.length === 0 ? (
@@ -209,62 +202,60 @@ export const Products = () => {
           </div>
         )}
 
-        {totalPages > 1 && (
-          <div className="mt-4 flex items-center justify-between">
-            <span className="text-xs text-gray-500">
-              Página {page} de {totalPages} • {totalItems} itens
-            </span>
+        <div className="mt-4 flex  items-center justify-between">
+          <span className="text-xs text-gray-500">
+            Página {page} de {totalPages} • {totalItems} itens
+          </span>
 
-            <Pagination>
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (page > 1) handlePrev();
+                  }}
+                  aria-disabled={page === 1}
+                  className={
+                    page === 1 ? "pointer-events-none opacity-50" : ""
+                  }
+                />
+              </PaginationItem>
+
+              {pagesToShow.map((p) => (
+                <PaginationItem key={p}>
+                  <PaginationLink
                     href="#"
+                    isActive={p === page}
                     onClick={(e) => {
                       e.preventDefault();
-                      if (page > 1) handlePrev();
+                      handleGoToPage(p);
                     }}
-                    aria-disabled={page === 1}
-                    className={
-                      page === 1 ? "pointer-events-none opacity-50" : ""
-                    }
-                  />
+                  >
+                    {p}
+                  </PaginationLink>
                 </PaginationItem>
+              ))}
 
-                {pagesToShow.map((p) => (
-                  <PaginationItem key={p}>
-                    <PaginationLink
-                      href="#"
-                      isActive={p === page}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleGoToPage(p);
-                      }}
-                    >
-                      {p}
-                    </PaginationLink>
-                  </PaginationItem>
-                ))}
-
-                <PaginationItem>
-                  <PaginationNext
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (page < totalPages) handleNext();
-                    }}
-                    aria-disabled={page === totalPages}
-                    className={
-                      page === totalPages
-                        ? "pointer-events-none opacity-50"
-                        : ""
-                    }
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
-        )}
+              <PaginationItem>
+                <PaginationNext
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (page < totalPages) handleNext();
+                  }}
+                  aria-disabled={page === totalPages}
+                  className={
+                    page === totalPages
+                      ? "pointer-events-none opacity-50"
+                      : ""
+                  }
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
       </div>
 
       <ProductModal

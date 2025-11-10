@@ -13,6 +13,7 @@ namespace ShopAPI.Infrastructure.Data
 
         public ShopDbContext(DbContextOptions<ShopDbContext> options) : base(options)
         {
+            Database.AutoTransactionBehavior = AutoTransactionBehavior.Never;
         }
 
 
