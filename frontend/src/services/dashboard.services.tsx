@@ -13,13 +13,13 @@ export interface DashboardCategoryGraphItem {
 }
 
 export async function getDashboardSummary(): Promise<DashboardSummary> {
-  const { data } = await api.get<DashboardSummary>("/api/Dashboard/summary");
+  const { data } = await api.get<DashboardSummary>("/Dashboard/summary");
   return data;
 }
 
 export async function getDashboardGraph(): Promise<DashboardCategoryGraphItem[]> {
   const { data } = await api.get<DashboardCategoryGraphItem[]>(
-    "/api/Dashboard/graphByCategory"
+    "/Dashboard/graphByCategory"
   );
   return data;
 }

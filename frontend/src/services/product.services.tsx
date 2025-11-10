@@ -47,7 +47,7 @@ export interface GetProductsParams {
 export async function getProducts(params: GetProductsParams) {
   const { page, pageSize, name, categoryId} = params;
 
-  const { data } = await api.get("/api/product", {
+  const { data } = await api.get("/product", {
     params: { page, pageSize, name, categoryId},
   });
 
@@ -58,14 +58,14 @@ export async function getProducts(params: GetProductsParams) {
 export async function createProduct(
   input: CreateProductInput
 ): Promise<Product> {
-  const { data } = await api.post<Product>("/api/product", input);
+  const { data } = await api.post<Product>("/product", input);
   return data;
 }
 
 export async function updateProduct(
   input: UpdateProductInput
 ): Promise<Product> {
-  const { data } = await api.put<Product>(`/api/product/${input.id}`, {
+  const { data } = await api.put<Product>(`/product/${input.id}`, {
     id: input.id,
     name: input.name,
     description: input.description,
@@ -77,14 +77,14 @@ export async function updateProduct(
 }
 
 export async function deleteProduct(id: string): Promise<void> {
-  await api.delete(`/api/product/${id}`);
+  await api.delete(`/product/${id}`);
 }
 
 export async function updateProductStock(
   input: UpdateProductStockInput
 ): Promise<Product> {
   const { data } = await api.patch<Product>(
-    `/api/product/${input.id}/storage`,
+    `/product/${input.id}/storage`,
     { ProductId: input.id,
       quantity: input.quantity }
   );

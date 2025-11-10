@@ -10,15 +10,35 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useDashboardSummary } from "@/hooks/dashboard/useSummary";
+import { useAuth } from "@/stores/AuthProvider";
+
+function getInitials(name: string): string {
+  if (!name) return "";
+  const parts = name.trim().split(" ").filter(Boolean);
+  if (parts.length === 1) {
+    return parts[0].slice(0, 2).toUpperCase();
+  }
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
 
 export const Header = () => {
   const { data: summary } = useDashboardSummary();
   const lowStockCount = summary?.lowStorageProducts.length ?? 0;
 
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
+
+  const displayName = user?.name ?? user?.username ?? "Usuário";
+  const role = user?.role ?? "Usuário";
+  const initials = getInitials(displayName) || "??";
 
   function handleNotificationsClick() {
     navigate("/estoque");
+  }
+
+  function handleLogoutClick() {
+    logout();
+    navigate("/login");
   }
 
   return (
@@ -48,21 +68,30 @@ export const Header = () => {
               </button>
             </TooltipTrigger>
             <TooltipContent>
-              <p className="text-sm">
-                Ver itens com baixo estoque
-              </p>
+              <p className="text-sm">Ver itens com baixo estoque</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
 
-        <span className="grid h-12 w-12 place-content-center rounded-full bg-emerald-500 text-xl font-semibold text-white">
-          NM
+        {/* Avatar com iniciais */}
+        <span className="grid h-12 w-12 place-content-center rounded-full bg-emerald-500 text-lg font-semibold text-white">
+          {initials}
         </span>
+
+        {/* Nome + role */}
         <div className="flex flex-col items-start">
-          <h2 className="text-base font-semibold">Nome da Pessoa</h2>
-          <h2 className="text-sm text-gray-500">Role</h2>
+          <h2 className="text-base font-semibold">{displayName}</h2>
+          <h2 className="text-sm text-gray-500">{role}</h2>
         </div>
-        <LogOut className="cursor-pointer text-red-600" />
+
+        {/* Logout */}
+        <button
+          type="button"
+          onClick={handleLogoutClick}
+          className="text-red-600 hover:text-red-700"
+        >
+          <LogOut className="h-5 w-5 cursor-pointer" />
+        </button>
       </div>
     </header>
   );
