@@ -1,6 +1,5 @@
-// src/components/Header.tsx
 import { LogOut, Bell } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "@/assets/logo.png"
 import { useNavigate } from "react-router-dom";
 
 import {
