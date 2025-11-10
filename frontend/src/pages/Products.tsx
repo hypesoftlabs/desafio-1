@@ -8,8 +8,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../components/select"
+import { useProducts } from '../hooks/useProducts'
 
 export const Products = () => {
+
+  const data = useProducts()
+  console.log(data)
     return(
         <>
         <div className='flex gap-x-5 h-15 justify-between p-2'>

@@ -63,6 +63,18 @@ try
 
 
     builder.Services.AddControllers();
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("FrontendPolicy", policy =>
+        {
+            policy
+                .WithOrigins("http://localhost:3000") 
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+        });
+    });
+
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(options =>
     {
@@ -207,6 +219,7 @@ try
     }
 
     app.UseHttpsRedirection();
+    app.UseCors("FrontendPolicy");
     app.UseAuthentication();
     app.UseAuthorization();
     app.MapHealthChecks("/health");
