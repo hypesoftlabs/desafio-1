@@ -12,6 +12,7 @@ export const Input = ({ icon, className = '', ...props }: RoundedInputProps) => 
     <div 
       className={`
         flex items-center gap-2
+        h-fit
         bg-gray-100 
         rounded-full 
         px-4 py-3 

@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Você pode definir os tipos para as props do seu produto
 type ProductCardProps = {
   name: string;
   category: string;
@@ -10,9 +9,9 @@ type ProductCardProps = {
 
 export const ProductCard = ({ name, category, price, stock }: ProductCardProps) => {
   return (
-    <div className="bg-white flex flex-col gap-3.5 rounded-lg shadow-md p-6 relative">
+    <div className="bg-white flex flex-col gap-3.5 rounded-lg shadow-sm p-6 relative">
       <div className="absolute top-4 right-4 flex space-x-2">
-        <button className="text-gray-400 hover:text-blue-500 p-1 rounded-full transition-colors duration-200">
+        <button className="text-gray-400 hover:text-emerald-600 p-1 rounded-full transition-colors duration-200 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -29,7 +28,7 @@ export const ProductCard = ({ name, category, price, stock }: ProductCardProps) 
           </svg>
         </button>
         
-        <button className="text-gray-400 hover:text-red-500 p-1 rounded-full transition-colors duration-200">
+        <button className="text-gray-400 hover:text-red-500 p-1 rounded-full transition-colors duration-200 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
