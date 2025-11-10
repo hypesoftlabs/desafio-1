@@ -12,6 +12,9 @@ using Serilog;
 using MongoDB.Driver;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -104,25 +107,75 @@ try
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddJwtBearer(options =>
-    {
-  
-        options.MetadataAddress = $"{internalAuthority}/.well-known/openid-configuration";
+     .AddJwtBearer(options =>
+     {
+         options.MetadataAddress = $"{internalAuthority}/.well-known/openid-configuration";
+         options.RequireHttpsMetadata = false;
 
-        options.RequireHttpsMetadata = false;
+         options.TokenValidationParameters = new TokenValidationParameters
+         {
+             ValidateIssuer = true,
+             ValidIssuer = externalAuthority,
 
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidIssuer = externalAuthority,
+             ValidateAudience = true,
+             ValidAudience = audience,
 
-            ValidateAudience = true,
-            ValidAudience = audience,
+             ValidateLifetime = true,
+             ValidateIssuerSigningKey = true,
 
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true
-        };
-    });
+             NameClaimType = "preferred_username",
+             RoleClaimType = ClaimTypes.Role
+         };
+
+         options.Events = new JwtBearerEvents
+         {
+             OnTokenValidated = context =>
+             {
+                 var identity = context.Principal?.Identity as ClaimsIdentity;
+                 if (identity == null)
+                     return Task.CompletedTask;
+
+                 // realm_access.roles
+                 var realmAccess = identity.FindFirst("realm_access")?.Value;
+                 if (!string.IsNullOrEmpty(realmAccess))
+                 {
+                     using var doc = JsonDocument.Parse(realmAccess);
+                     if (doc.RootElement.TryGetProperty("roles", out var rolesElement))
+                     {
+                         foreach (var role in rolesElement.EnumerateArray())
+                         {
+                             var roleName = role.GetString();
+                             if (!string.IsNullOrEmpty(roleName))
+                             {
+                                 identity.AddClaim(new Claim(ClaimTypes.Role, roleName));
+                             }
+                         }
+                     }
+                 }
+
+                 // resource_access.shop-api.roles
+                 var resourceAccess = identity.FindFirst("resource_access")?.Value;
+                 if (!string.IsNullOrEmpty(resourceAccess))
+                 {
+                     using var doc = JsonDocument.Parse(resourceAccess);
+                     if (doc.RootElement.TryGetProperty("shop-api", out var clientElement) &&
+                         clientElement.TryGetProperty("roles", out var clientRolesElement))
+                     {
+                         foreach (var role in clientRolesElement.EnumerateArray())
+                         {
+                             var roleName = role.GetString();
+                             if (!string.IsNullOrEmpty(roleName))
+                             {
+                                 identity.AddClaim(new Claim(ClaimTypes.Role, roleName));
+                             }
+                         }
+                     }
+                 }
+
+                 return Task.CompletedTask;
+             }
+         };
+     });
     builder.Services.AddAuthorization();
 
     builder.Services.AddHealthChecks()
