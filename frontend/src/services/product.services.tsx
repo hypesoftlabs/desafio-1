@@ -37,14 +37,18 @@ export type UpdateProductStockInput = {
   id: string;
   quantity: number;
 };
+export interface GetProductsParams {
+  page: number;
+  pageSize: number;
+  name?: string;
+  categoryId?: string;
+}
 
-// GET paginado
-export async function getProductsPaged(
-  page: number,
-  pageSize: number
-): Promise<ProductPage> {
-  const { data } = await api.get<ProductPage>("/api/product", {
-    params: { page, pageSize },
+export async function getProducts(params: GetProductsParams) {
+  const { page, pageSize, name, categoryId} = params;
+
+  const { data } = await api.get("/api/product", {
+    params: { page, pageSize, name, categoryId},
   });
 
   return data;

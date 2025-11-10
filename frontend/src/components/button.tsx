@@ -18,6 +18,8 @@ export const Button = ({
         bg-linear-to-r from-emerald-600 to-lime-500 
         cursor-pointer
         rounded-3xl
+        py-3
+        h-fit
         text-white font-bold
         px-6                                  
         shadow-lg                                    

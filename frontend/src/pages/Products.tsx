@@ -1,19 +1,13 @@
 // src/pages/Products.tsx
-import { useMemo, useState } from "react";
-import { Plus } from "lucide-react";
+import { useMemo, useState, useEffect } from "react";
+import { Plus, Search } from "lucide-react";
 
 import { ProductCard } from "../components/card";
 import { Button } from "../components/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../components/select";
 import { CircularLoader } from "../components/loading";
 import { ProductModal } from "../components/ProductModal";
 import { ConfirmModal } from "../components/ConfrmModal";
+import { Input } from "../components/input";
 
 import { useProducts } from "../hooks/products/useProducts";
 import { useCategories } from "../hooks/categories/useCategories";
@@ -31,17 +25,36 @@ import {
   PaginationLink,
 } from "@/components/ui/pagination";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/select";
+
 const PAGE_SIZE = 10;
 
 export const Products = () => {
   const [page, setPage] = useState(1);
+  const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [productToDelete, setProductToDelete] = useState<Product | null>(null);
 
+  const categoryIdFilter =
+    selectedCategory === "all" ? undefined : selectedCategory;
+
+  useEffect(() => {
+    setPage(1);
+  }, [search, selectedCategory]);
+
   const { isLoading, isFetching, data, error } = useProducts({
     page,
     pageSize: PAGE_SIZE,
+    name: search || undefined,
+    categoryId: categoryIdFilter,
   });
 
   const { data: categoriesData } = useCategories();
@@ -124,11 +137,42 @@ export const Products = () => {
 
   return (
     <>
-      <div className="flex h-15 justify-between gap-x-5 p-2">
-        <h2 className="text-3xl font-semibold text-gray-700">
-          Produtos
-        </h2>
+      <h2 className="text-3xl font-semibold text-gray-700">
+        Produtos
+      </h2>
 
+      <div className="mt-2 flex h-20 items-center justify-between gap-5">
+        <div className="flex flex-1 items-center gap-3">
+          <div className="relative w-full max-w-xs">
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+            <Input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Buscar por nome"
+              className="w-full rounded-lg border border-gray-300 py-2 pl-9 pr-3 text-sm"
+            />
+          </div>
+
+            <Select
+              value={selectedCategory}
+              onValueChange={(value) => setSelectedCategory(value)}
+            >
+              <SelectTrigger className="max-w-xs py-2 rounded-lg border border-gray-300 text-md">
+                <SelectValue placeholder="Filtrar por categoria" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Todas as categorias</SelectItem>
+                {categories.map((category) => (
+                  <SelectItem key={category.id} value={category.id}>
+                    {category.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+       
+        </div>
 
         <Button icon={<Plus />} onClick={handleAdd}>
           Adicionar
@@ -148,7 +192,7 @@ export const Products = () => {
           </div>
         ) : (
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {products.map((product) => {
+            {products.map((product: Product) => {
               const categoryName =
                 categoryNameById[product.categoryId] ?? "Sem categoria";
 
@@ -158,7 +202,7 @@ export const Products = () => {
                   product={product}
                   categoryName={categoryName}
                   onEdit={handleEdit}
-                  onDelete={handleAskDelete} // <- novo
+                  onDelete={handleAskDelete}
                 />
               );
             })}
