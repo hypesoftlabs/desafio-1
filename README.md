@@ -67,7 +67,12 @@ Ainda no diretório frontend/, inicie o servidor do Vite:
 npm run dev
 ``
 A aplicação estará disponível no endereço local indicado no terminal.
-Para logar utilize o usuário padrão:
 
+###Para logar utilize o usuário padrão:
+```
 Usuário: adminUser
+```
+```
 Senha: 123
+```
+
