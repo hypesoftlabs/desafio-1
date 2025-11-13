@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\dockerfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:dockerfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D843CF-74ED-4C0A-9F53-241A21D77310}|..\\ShopAPI.Application.Tests\\ShopAPI.Application.Tests.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application.tests\\getdashboardsummaryhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26D843CF-74ED-4C0A-9F53-241A21D77310}|..\\ShopAPI.Application.Tests\\ShopAPI.Application.Tests.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application.tests\\shopapi.application.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB090915-79B6-4BCB-9E8F-5BD8D8C7BE38}|..\\ShopAPI.Application\\ShopAPI.Application.csproj|c:\\projetos\\desafio-1\\backend\\shopapi.application\\handlers\\getdashboardsummaryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|c:\\projetos\\desafio-1\\backend\\shopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9AFC56B-3463-40B0-9B91-B6154AFF56DD}|ShopAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile.txt",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Dockerfile.txt",
+              "RelativeDocumentMoniker": "Dockerfile.txt",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Dockerfile.txt",
+              "RelativeToolTip": "Dockerfile.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-09T16:18:25.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShopAPI.Application.Tests.csproj",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application.Tests\\ShopAPI.Application.Tests.csproj",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application.Tests\\ShopAPI.Application.Tests.csproj",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application.Tests\\ShopAPI.Application.Tests.csproj",
+              "RelativeToolTip": "..\\ShopAPI.Application.Tests\\ShopAPI.Application.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-09T00:46:00.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetDashboardSummaryHandlerTests.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application.Tests\\GetDashboardSummaryHandlerTests.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application.Tests\\GetDashboardSummaryHandlerTests.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application.Tests\\GetDashboardSummaryHandlerTests.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application.Tests\\GetDashboardSummaryHandlerTests.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T00:42:53.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetDashboardSummaryHandler.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetDashboardSummaryHandler.cs",
+              "RelativeDocumentMoniker": "..\\ShopAPI.Application\\Handlers\\GetDashboardSummaryHandler.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Application\\Handlers\\GetDashboardSummaryHandler.cs",
+              "RelativeToolTip": "..\\ShopAPI.Application\\Handlers\\GetDashboardSummaryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T00:35:52.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Projetos\\desafio-1\\backend\\ShopAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAI4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T00:33:55.968Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

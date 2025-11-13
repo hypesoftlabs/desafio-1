@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "3ujQC/SufZs=",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\desafio-1\\backend\\ShopAPI.Domain\\ShopAPI.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\helo_\\.nuget\\packages\\mongodb.bson\\3.5.0\\mongodb.bson.3.5.0.nupkg.sha512",
+    "C:\\Users\\helo_\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\helo_\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+C:\Projetos\desafio-1\backend\ShopAPI.Application\bin\Debug\net9.0\ShopAPI.Application.deps.json
+C:\Projetos\desafio-1\backend\ShopAPI.Application\bin\Debug\net9.0\ShopAPI.Application.dll
+C:\Projetos\desafio-1\backend\ShopAPI.Application\bin\Debug\net9.0\ShopAPI.Application.pdb
+C:\Projetos\desafio-1\backend\ShopAPI.Application\bin\Debug\net9.0\ShopAPI.Domain.dll
+C:\Projetos\desafio-1\backend\ShopAPI.Application\bin\Debug\net9.0\ShopAPI.Domain.pdb
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.csproj.AssemblyReference.cache
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.AssemblyInfoInputs.cache
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.AssemblyInfo.cs
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.sourcelink.json
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI..43AE0107.Up2Date
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.dll
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\refint\ShopAPI.Application.dll
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ShopAPI.Application.pdb
+C:\Projetos\desafio-1\backend\ShopAPI.Application\obj\Debug\net9.0\ref\ShopAPI.Application.dll
